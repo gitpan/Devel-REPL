@@ -1,0 +1,26 @@
+inc/Module/AutoInstall.pm
+inc/Module/Install.pm
+inc/Module/Install/AutoInstall.pm
+inc/Module/Install/Base.pm
+inc/Module/Install/Can.pm
+inc/Module/Install/Fetch.pm
+inc/Module/Install/Include.pm
+inc/Module/Install/Makefile.pm
+inc/Module/Install/Metadata.pm
+inc/Module/Install/Scripts.pm
+inc/Module/Install/Win32.pm
+inc/Module/Install/WriteAll.pm
+lib/Devel/REPL.pm
+lib/Devel/REPL/Plugin/DumpHistory.pm
+lib/Devel/REPL/Plugin/History.pm
+lib/Devel/REPL/Plugin/LexEnv.pm
+lib/Devel/REPL/Plugin/NewlineHack.pm
+lib/Devel/REPL/Plugin/Packages.pm
+lib/Devel/REPL/Plugin/ReadLineHistory.pm
+lib/Devel/REPL/Plugin/ShowClass.pm
+lib/Devel/REPL/Plugin/Turtles.pm
+lib/Devel/REPL/Script.pm
+Makefile.PL
+MANIFEST			This list of files
+META.yml
+script/re.pl
