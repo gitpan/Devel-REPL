@@ -7,6 +7,7 @@ all_from 'lib/Devel/REPL.pm';
 
 install_script 'script/re.pl';
 
+build_requires 'Test::More';
 requires 'Moose';
 requires 'MooseX::Object::Pluggable';
 requires 'MooseX::Getopt';
