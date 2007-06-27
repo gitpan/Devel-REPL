@@ -1,0 +1,8 @@
+1.1.0
+  - profile system
+  - fix up dependencies
+  - DDS plugin
+  - Commands plugin
+  - Plugin metaclass
+1.0.0
+  - Initial release

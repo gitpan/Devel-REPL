@@ -15,6 +15,8 @@ requires 'namespace::clean';
 requires 'File::HomeDir';
 requires 'File::Spec';
 requires 'Term::ReadLine';
+requires 'Lexical::Persistence';
+requires 'Data::Dump::Streamer';
 
 auto_install;
 WriteAll;

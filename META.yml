@@ -15,12 +15,14 @@ no_index:
     - inc
     - t
 requires: 
+  Data::Dump::Streamer: 0
   File::HomeDir: 0
   File::Spec: 0
+  Lexical::Persistence: 0
   Moose: 0
   MooseX::Getopt: 0
   MooseX::Object::Pluggable: 0
   Term::ReadLine: 0
   namespace::clean: 0
   perl: 5.8.1
-version: 1.000001
+version: 1.001000
