@@ -5,7 +5,7 @@ use Moose;
 use namespace::clean -except => [ 'meta' ];
 use 5.8.1; # might work with earlier perls but probably not
 
-our $VERSION = '1.001000'; # 1.1.0
+our $VERSION = '1.002000'; # 1.2.0
 
 with 'MooseX::Object::Pluggable';
 
@@ -36,7 +36,13 @@ sub run_once {
   my $line = $self->read;
   return unless defined($line); # undefined value == EOF
   my @ret = $self->eval($line);
-  $self->print(@ret);
+  eval {
+    $self->print(@ret);
+  };
+  if ($@) {
+    my $error = $@;
+    eval { $self->print("Error printing! - $error\n"); };
+  }
   return 1;
 }
 
@@ -87,6 +93,7 @@ sub print {
   my $fh = $self->out_fh;
   no warnings 'uninitialized';
   print $fh "@ret";
+  print $fh "\n" if $self->term->ReadLine =~ /Gnu/;
 }
 
 =head1 NAME
@@ -106,6 +113,22 @@ Alternatively, use the 're.pl' script installed with the distribution
 =head1 AUTHOR
 
 Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co.uk/>)
+
+=head1 CONTRIBUTORS
+
+=over 4
+
+=item Stevan Little - stevan (at) iinteractive.com
+
+=item Alexis Sukrieh - sukria+perl (at) sukria.net
+
+=item epitaph
+
+=item mgrimes - mgrimes (at) cpan dot org
+
+=item Shawn M Moore - sartak (at) gmail.com
+
+=back
 
 =head1 LICENSE
 

@@ -4,6 +4,8 @@ use Moose;
 
 extends 'Moose::Meta::Role';
 
+has '+$!authority' => (init_arg => 'NO_NO_NO');
+
 before 'apply' => sub {
   my ($self, $other) = @_;
   if (my $pre = $self->get_method('BEFORE_PLUGIN')) {

@@ -1,10 +1,11 @@
 --- 
 abstract: a modern perl interactive shell
-author: Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co.uk/>)
+author: 
+  - Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co.uk/>)
 build_requires: 
   Test::More: 0
 distribution_type: module
-generated_by: Module::Install version 0.67
+generated_by: Module::Install version 0.680
 license: perl
 meta-spec: 
   url: http://module-build.sourceforge.net/META-spec-v1.3.html
@@ -15,14 +16,18 @@ no_index:
     - inc
     - t
 requires: 
+  B::Keywords: 0
   Data::Dump::Streamer: 0
   File::HomeDir: 0
   File::Spec: 0
   Lexical::Persistence: 0
   Moose: 0
   MooseX::Getopt: 0
-  MooseX::Object::Pluggable: 0
+  MooseX::Object::Pluggable: 0.0007
+  PPI: 0
+  Task::Weaken: 0
+  Term::ANSIColor: 0
   Term::ReadLine: 0
   namespace::clean: 0
   perl: 5.8.1
-version: 1.001000
+version: 1.002000

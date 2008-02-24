@@ -1,3 +1,12 @@
+1.2.0
+  - fix Plugin to work with latest Moose
+  - deprecate NewlineHack plugin, cause fixed in REPL.pm
+  - OutputCache plugin
+  - MultiLine::PPI plugin
+  - Timing plugin
+  - Interrupt plugin
+  - FancyPrompt plugin
+  - Colors plugin
 1.1.0
   - profile system
   - fix up dependencies

@@ -32,6 +32,8 @@ sub load_profile {
   my ($self, $profile) = @_;
   $profile = "Devel::REPL::Profile::${profile}" unless $profile =~ /::/;
   Class::MOP::load_class($profile);
+  confess "Profile class ${profile} doesn't do 'Devel::REPL::Profile'"
+    unless $profile->does('Devel::REPL::Profile');
   $profile->new->apply_profile($self->_repl);
 }
 
@@ -43,17 +45,30 @@ sub load_rcfile {
     $rc_file = File::Spec->catfile(File::HomeDir->my_home, '.re.pl', $rc_file);
   }
 
-  if (-r $rc_file) {
-    open RCFILE, '<', $rc_file || die "Couldn't open ${rc_file}: $!";
-    my $rc_data;
-    { local $/; $rc_data = <RCFILE>; }
-    close RCFILE; # Don't care if this fails
-    $self->eval_rcdata($rc_data);
-    warn "Error executing rc file ${rc_file}: $@\n" if $@;
-  }
+  $self->apply_script($rc_file);
 }
 
-sub eval_rcdata {
+sub apply_script {
+  my ($self, $script, $warn_on_unreadable) = @_;
+
+  if (!-e $script) {
+    warn "File '$script' does not exist" if $warn_on_unreadable;
+    return;
+  }
+  elsif (!-r _) {
+    warn "File '$script' is unreadable" if $warn_on_unreadable;
+    return;
+  }
+
+  open RCFILE, '<', $script or die "Couldn't open ${script}: $!";
+  my $rc_data;
+  { local $/; $rc_data = <RCFILE>; }
+  close RCFILE; # Don't care if this fails
+  $self->eval_script($rc_data);
+  warn "Error executing script ${script}: $@\n" if $@;
+}
+
+sub eval_script {
   my ($self, $data) = @_;
   local $CURRENT_SCRIPT = $self;
   $self->_repl->eval($data);
