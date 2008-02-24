@@ -21,7 +21,7 @@ requires:
   File::HomeDir: 0
   File::Spec: 0
   Lexical::Persistence: 0
-  Moose: 0
+  Moose: 0.38
   MooseX::Getopt: 0
   MooseX::Object::Pluggable: 0.0007
   PPI: 0
@@ -30,4 +30,4 @@ requires:
   Term::ReadLine: 0
   namespace::clean: 0
   perl: 5.8.1
-version: 1.002000
+version: 1.002001
