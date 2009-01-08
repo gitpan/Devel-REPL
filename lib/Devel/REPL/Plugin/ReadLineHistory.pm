@@ -5,7 +5,7 @@
 
 package Devel::REPL::Plugin::ReadLineHistory;
 
-use Moose::Role;
+use Devel::REPL::Plugin;
 
 my $hist_file=$ENV{PERLREPL_HISTFILE} ||
              (($ENV{HOME} || (getpwuid($<))[7]) . "/.perlreplhist");
@@ -26,4 +26,12 @@ around 'run' => sub {
 };
 
 1;
+
+__END__
+
+=head1 NAME
+
+Devel::REPL::Plugin::ReadLineHistory - Integrate history with the facilities provided by L<Term::ReadLine>
+
+=cut
 

@@ -1,6 +1,6 @@
 package Devel::REPL::Plugin::History;
 
-use Moose::Role;
+use Devel::REPL::Plugin;
 use namespace::clean -except => [ 'meta' ];
 
 has 'history' => (
@@ -50,3 +50,12 @@ sub history_call {
 };
 
 1;
+
+__END__
+
+=head1 NAME
+
+Devel::REPL::Plugin::History - Keep track of all input, provide shortcuts !1, !-1
+
+=cut
+

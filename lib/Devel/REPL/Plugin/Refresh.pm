@@ -1,6 +1,6 @@
 package Devel::REPL::Plugin::Refresh;
 
-use Moose::Role;
+use Devel::REPL::Plugin;
 use namespace::clean -except => [ 'meta' ];
 use Module::Refresh;
 
@@ -18,3 +18,12 @@ around 'eval' => sub {
 };
 
 1;
+
+__END__
+
+=head1 NAME
+
+Devel::REPL::Plugin::Refresh - reload libraries with Module::Refresh
+
+=cut
+

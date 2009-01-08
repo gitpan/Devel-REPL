@@ -1,6 +1,8 @@
 package Devel::REPL::Plugin::Packages;
+use Devel::REPL::Plugin;
 
-use Moose::Role;
+use namespace::clean -except => [ "meta" ];
+
 use vars qw($PKG_SAVE);
 
 has 'current_package' => (
@@ -24,14 +26,15 @@ around 'mangle_line' => sub {
   my $line = $self->$orig(@args);
   # add a BEGIN block to set the package around at the end of the sub
   # without mangling the return value (we save it off into a global)
-  $line .= '; BEGIN { $Devel::REPL::Plugin::Packages::PKG_SAVE = __PACKAGE__; }';
+  $line .= '
+; BEGIN { $Devel::REPL::Plugin::Packages::PKG_SAVE = __PACKAGE__; }';
   return $line;
 };
 
 after 'execute' => sub {
   my ($self) = @_;
   # if we survived execution successfully, save the new package out the global
-  $self->current_package($PKG_SAVE);
+  $self->current_package($PKG_SAVE) if defined $PKG_SAVE;
 };
 
 around 'eval' => sub {
@@ -47,3 +50,12 @@ package Devel::REPL::Plugin::Packages::DefaultScratchpad;
 # declare empty scratchpad package for cleanliness
 
 1;
+
+__END__
+
+=head1 NAME
+
+Devel::REPL::Plugin::Packages - Keep track of which package the user is in
+
+=cut
+

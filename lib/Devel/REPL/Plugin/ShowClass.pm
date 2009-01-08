@@ -1,5 +1,5 @@
 package Devel::REPL::Plugin::ShowClass;
-use Moose::Role;
+use Devel::REPL::Plugin;
 use namespace::clean -except => [ 'meta' ];
 
 has 'metaclass_cache' => (
@@ -66,4 +66,12 @@ sub display_class {
 }
 
 1;
+
+__END__
+
+=head1 NAME
+
+Devel::REPL::Plugin::ShowClass - Dump classes initialized with Class::MOP
+
+=cut
 

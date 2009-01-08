@@ -1,8 +1,13 @@
 package Devel::REPL::Plugin::LexEnv;
 
-use Moose::Role;
+use Devel::REPL::Plugin;
 use namespace::clean -except => [ 'meta' ];
 use Lexical::Persistence;
+
+sub BEFORE_PLUGIN {
+    my $self = shift;
+    $self->load_plugin('FindVariable');
+}
 
 has 'lexical_environment' => (
   isa => 'Lexical::Persistence',
@@ -10,6 +15,12 @@ has 'lexical_environment' => (
   required => 1,
   lazy => 1,
   default => sub { Lexical::Persistence->new }
+);
+
+has '_hints' => (
+  isa => "ArrayRef",
+  is => "rw",
+  predicate => '_has_hints',
 );
 
 around 'mangle_line' => sub {
@@ -20,8 +31,13 @@ around 'mangle_line' => sub {
   # Collate my declarations for all LP context vars then add '';
   # so an empty statement doesn't return anything (with a no warnings
   # to prevent "Useless use ..." warning)
-  return join('', map { "my $_;\n" } keys %{$lp->get_context('_')})
-           .qq{{ no warnings 'void'; ''; }\n}.$line;
+  return join('',
+    'BEGIN { if ( $_REPL->_has_hints ) { ( $^H, %^H ) = @{ $_REPL->_hints } } }',
+    ( map { "my $_;\n" } keys %{$lp->get_context('_')} ),
+    qq{{ no warnings 'void'; ''; }\n},
+    $line,
+    '; BEGIN { $_REPL->_hints([ $^H, %^H ]) }',
+  );
 };
 
 around 'execute' => sub {
@@ -31,4 +47,26 @@ around 'execute' => sub {
   return $self->$orig($wrapped, @rest);
 };
 
+# this doesn't work! yarg. we now just check $self->can('lexical_environment')
+# in FindVariable
+
+#around 'find_variable' => sub {
+#  my $orig = shift;
+#  my ($self, $name) = @_;
+#
+#  return \( $self->lexical_environment->get_context('_')->{$name} )
+#    if exists $self->lexical_environment->get_context('_')->{$name};
+#
+#  return $orig->(@_);
+#};
+
 1;
+
+__END__
+
+=head1 NAME
+
+Devel::REPL::Plugin::LexEnv - Provide a lexical environment for the REPL
+
+=cut
+

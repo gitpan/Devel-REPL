@@ -1,6 +1,6 @@
 package Devel::REPL::Plugin::MultiLine::PPI;
 
-use Moose::Role;
+use Devel::REPL::Plugin;
 use PPI;
 use namespace::clean -except => [ 'meta' ];
 
@@ -20,37 +20,56 @@ around 'read' => sub {
   my $line = $self->$orig(@args);
 
   if (defined $line) {
-    while (needs_continuation($line)) {
-      my $orig_prompt = $self->prompt;
-      $self->prompt($self->continuation_prompt);
-
-      $self->line_depth($self->line_depth + 1);
-      my $append = $self->read(@args);
-      $self->line_depth($self->line_depth - 1);
-
-      $line .= $append if defined($append);
-
-      $self->prompt($orig_prompt);
-
-      # ^D means "shut up and eval already"
-      return $line if !defined($append);
-    }
+    return $self->continue_reading_if_necessary($line, @args);
+  } else {
+    return $line;
   }
-  return $line;
 };
 
-sub needs_continuation
+sub continue_reading_if_necessary {
+  my ( $self, $line, @args ) = @_;
+
+  while ($self->line_needs_continuation($line)) {
+    my $orig_prompt = $self->prompt;
+    $self->prompt($self->continuation_prompt);
+
+    $self->line_depth($self->line_depth + 1);
+    my $append = $self->read(@args);
+    $self->line_depth($self->line_depth - 1);
+
+    $line .= "\n$append" if defined($append);
+
+    $self->prompt($orig_prompt);
+
+    # ^D means "shut up and eval already"
+    return $line if !defined($append);
+  }
+
+  return $line;
+}
+
+sub line_needs_continuation
 {
+  my $repl = shift;
   my $line = shift;
+
+  # add this so we can test whether the document ends in PPI::Statement::Null
+  $line .= "\n;;";
+
   my $document = PPI::Document->new(\$line);
   return 0 if !defined($document);
+
+  # adding ";" to a complete document adds a PPI::Statement::Null. we added a ;;
+  # so if it doesn't end in null then there's probably something that's
+  # incomplete
+  return 0 if $document->child(-1)->isa('PPI::Statement::Null');
 
   # this could use more logic, such as returning 1 on s/foo/ba<Enter>
   my $unfinished_structure = sub
   {
     my ($document, $element) = @_;
     return 0 unless $element->isa('PPI::Structure');
-    return 1 unless $element->start && $element->finish;
+    return 1 unless $element->finish;
     return 0;
   };
 

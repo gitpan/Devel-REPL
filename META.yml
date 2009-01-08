@@ -1,33 +1,38 @@
---- 
-abstract: a modern perl interactive shell
-author: 
-  - Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co.uk/>)
-build_requires: 
+---
+abstract: 'a modern perl interactive shell'
+author:
+  - 'Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co.uk/>)'
+build_requires:
   Test::More: 0
 distribution_type: module
-generated_by: Module::Install version 0.680
+generated_by: 'Module::Install version 0.76'
 license: perl
-meta-spec: 
-  url: http://module-build.sourceforge.net/META-spec-v1.3.html
-  version: 1.3
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
 name: Devel-REPL
-no_index: 
-  directory: 
+no_index:
+  directory:
     - inc
     - t
-requires: 
+    - examples
+requires:
+  App::Nopaste: 0
   B::Keywords: 0
   Data::Dump::Streamer: 0
   File::HomeDir: 0
   File::Spec: 0
   Lexical::Persistence: 0
-  Moose: 0.38
-  MooseX::Getopt: 0
-  MooseX::Object::Pluggable: 0.0007
+  Moose: 0.64
+  MooseX::AttributeHelpers: 0.14
+  MooseX::Getopt: 0.15
+  MooseX::Object::Pluggable: 0.0009
   PPI: 0
   Task::Weaken: 0
   Term::ANSIColor: 0
   Term::ReadLine: 0
   namespace::clean: 0
   perl: 5.8.1
-version: 1.002001
+resources:
+  license: http://dev.perl.org/licenses/
+version: 1.003001

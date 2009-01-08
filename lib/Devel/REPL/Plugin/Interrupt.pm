@@ -1,6 +1,6 @@
 package Devel::REPL::Plugin::Interrupt;
 
-use Moose::Role;
+use Devel::REPL::Plugin;
 use namespace::clean -except => [ 'meta' ];
 
 around 'eval' => sub {
@@ -15,4 +15,16 @@ around 'eval' => sub {
 };
 
 1;
+
+__END__
+
+=head1 NAME
+
+Devel::REPL::Plugin::Interrupt - traps SIGINT to kill long-running lines
+
+=head1 AUTHOR
+
+Shawn M Moore, C<< <sartak at gmail dot com> >>
+
+=cut
 

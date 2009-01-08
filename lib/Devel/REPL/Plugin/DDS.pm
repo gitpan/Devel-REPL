@@ -1,9 +1,9 @@
 package Devel::REPL::Plugin::DDS;
 
-use Moose::Role;
+use Devel::REPL::Plugin;
 use Data::Dump::Streamer ();
 
-around 'print' => sub {
+around 'format_result' => sub {
   my $orig = shift;
   my $self = shift;
   my $to_dump = (@_ > 1) ? [@_] : $_[0];
@@ -20,3 +20,12 @@ around 'print' => sub {
 };
 
 1;
+
+__END__
+
+=head1 NAME
+
+Devel::REPL::Plugin::DDS - Format results with Data::Dump::Streamer
+
+=cut
+

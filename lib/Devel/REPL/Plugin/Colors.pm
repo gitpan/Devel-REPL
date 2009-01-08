@@ -1,6 +1,6 @@
 package Devel::REPL::Plugin::Colors;
 
-use Moose::Role;
+use Devel::REPL::Plugin;
 use Term::ANSIColor;
 use namespace::clean -except => [ 'meta' ];
 
@@ -14,7 +14,7 @@ has error_color => (
   default => 'bold red',
 );
 
-around error_return => sub {
+around format_error => sub {
   my $orig = shift;
   my $self = shift;
   return color($self->error_color)
@@ -23,12 +23,15 @@ around error_return => sub {
 };
 
 # we can't just munge @_ because that screws up DDS
-around print => sub {
+around format_result => sub {
   my $orig = shift;
   my $self = shift;
-  print {$self->out_fh} color($self->normal_color);
-  $orig->($self, @_);
-  print {$self->out_fh} color('reset');
+  no warnings 'uninitialized';
+  return join "", (
+    color($self->normal_color),
+    $orig->($self, @_),
+    color('reset'),
+  );
 };
 
 # make arbitrary warns colored -- somewhat difficult because warn doesn't

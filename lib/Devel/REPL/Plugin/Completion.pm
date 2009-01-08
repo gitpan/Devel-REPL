@@ -18,8 +18,19 @@ has match_index => (
   default => sub { 0 },
 );
 
-sub BEFORE_PLUGIN {
+has no_term_class_warning => (
+  isa => "Bool",
+  is  => "rw",
+  default => 0,
+);
+
+before 'read' => sub {
   my ($self) = @_;
+
+  if (!$self->term->isa("Term::ReadLine::Gnu") and !$self->no_term_class_warning) {
+    warn "Term::ReadLine::Gnu is required for the Completion plugin to work";
+    $self->no_term_class_warning(1);
+  }
 
   my $weakself = $self;
   weaken($weakself);
@@ -27,7 +38,7 @@ sub BEFORE_PLUGIN {
   $self->term->Attribs->{attempted_completion_function} = sub {
     $weakself->_completion(@_);
   };
-}
+};
 
 sub _completion {
   my ($self, $text, $line, $start, $end) = @_;
@@ -64,5 +75,28 @@ sub complete {
   return ();
 }
 
+# recursively find the last element
+sub last_ppi_element {
+  my ($self, $document, $type) = @_;
+  my $last = $document;
+  while ($last->can('last_element') && defined($last->last_element)) {
+    $last = $last->last_element;
+    return $last if $type && $last->isa($type);
+  }
+  return $last;
+}
+
 1;
+
+__END__
+
+=head1 NAME
+
+Devel::REPL::Plugin::Completion - Extensible tab completion
+
+=head1 AUTHOR
+
+Shawn M Moore, C<< <sartak at gmail dot com> >>
+
+=cut
 

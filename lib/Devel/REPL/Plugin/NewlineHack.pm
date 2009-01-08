@@ -6,7 +6,7 @@
 
 package Devel::REPL::Plugin::NewlineHack;
 
-use Moose::Role;
+use Devel::REPL::Plugin;
 use namespace::clean -except => [ 'meta' ];
 
 warn <<EOW;
@@ -17,4 +17,12 @@ This plugin will be removed at some point; please remove it from your config.
 EOW
 
 1;
+
+__END__
+
+=head1 NAME
+
+Devel::REPL::Plugin::NewlineHack - (deprecated)
+
+=cut
 
