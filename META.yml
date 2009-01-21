@@ -17,17 +17,14 @@ no_index:
     - t
     - examples
 requires:
-  App::Nopaste: 0
-  B::Keywords: 0
-  Data::Dump::Streamer: 0
+  B::Concise: 0
+  Devel::Peek: 0
   File::HomeDir: 0
   File::Spec: 0
-  Lexical::Persistence: 0
   Moose: 0.64
   MooseX::AttributeHelpers: 0.14
   MooseX::Getopt: 0.15
   MooseX::Object::Pluggable: 0.0009
-  PPI: 0
   Task::Weaken: 0
   Term::ANSIColor: 0
   Term::ReadLine: 0
@@ -35,4 +32,4 @@ requires:
   perl: 5.8.1
 resources:
   license: http://dev.perl.org/licenses/
-version: 1.003001
+version: 1.003002
