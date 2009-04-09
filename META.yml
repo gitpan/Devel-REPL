@@ -21,9 +21,9 @@ requires:
   Devel::Peek: 0
   File::HomeDir: 0
   File::Spec: 0
-  Moose: 0.64
-  MooseX::AttributeHelpers: 0.14
-  MooseX::Getopt: 0.15
+  Moose: 0.74
+  MooseX::AttributeHelpers: 0.16
+  MooseX::Getopt: 0.18
   MooseX::Object::Pluggable: 0.0009
   Task::Weaken: 0
   Term::ANSIColor: 0
@@ -32,4 +32,4 @@ requires:
   perl: 5.8.1
 resources:
   license: http://dev.perl.org/licenses/
-version: 1.003004
+version: 1.003005

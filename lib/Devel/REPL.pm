@@ -5,7 +5,7 @@ use Moose;
 use namespace::clean -except => [ 'meta' ];
 use 5.008001; # backwards compat, doesn't warn like 5.8.1
 
-our $VERSION = '1.003004'; # 1.3.4
+our $VERSION = '1.003005'; # 1.3.5
 
 with 'MooseX::Object::Pluggable';
 
@@ -403,6 +403,8 @@ Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co
 =item Shawn M Moore - sartak (at) gmail.com
 
 =item Oliver Gorwits - oliver on irc.perl.org
+
+=item Andrew Moore - C<< <amoore@cpan.org> >>
 
 =back
 
