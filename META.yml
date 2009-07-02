@@ -3,9 +3,12 @@ abstract: 'a modern perl interactive shell'
 author:
   - 'Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co.uk/>)'
 build_requires:
+  ExtUtils::MakeMaker: 6.42
   Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
 distribution_type: module
-generated_by: 'Module::Install version 0.76'
+generated_by: 'Module::Install version 0.91'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -13,9 +16,9 @@ meta-spec:
 name: Devel-REPL
 no_index:
   directory:
+    - examples
     - inc
     - t
-    - examples
 requires:
   B::Concise: 0
   Devel::Peek: 0
@@ -32,4 +35,4 @@ requires:
   perl: 5.8.1
 resources:
   license: http://dev.perl.org/licenses/
-version: 1.003006
+version: 1.003007
