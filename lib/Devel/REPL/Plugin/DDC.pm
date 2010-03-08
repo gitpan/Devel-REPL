@@ -1,7 +1,7 @@
-package Devel::REPL::Plugin::DDS;
+package Devel::REPL::Plugin::DDC;
 
 use Devel::REPL::Plugin;
-use Data::Dump::Streamer ();
+use Data::Dumper::Concise ();
 
 around 'format_result' => sub {
   my $orig = shift;
@@ -12,10 +12,7 @@ around 'format_result' => sub {
     if (overload::Method($to_dump, '""')) {
       $out = "$to_dump";
     } else {
-      my $dds = Data::Dump::Streamer->new;
-      $dds->Freezer(sub { "$_[0]"; });
-      $dds->Data($to_dump);
-      $out = $dds->Out;
+      $out = Data::Dumper::Concise::Dumper($to_dump);
     }
   } else {
     $out = $to_dump;
@@ -29,7 +26,7 @@ __END__
 
 =head1 NAME
 
-Devel::REPL::Plugin::DDS - Format results with Data::Dump::Streamer
+Devel::REPL::Plugin::DDC - Format results with Data::Dumper::Concise
 
 =head1 SYNOPSIS
 
@@ -41,11 +38,11 @@ Devel::REPL::Plugin::DDS - Format results with Data::Dump::Streamer
 
  # after you run re.pl:
  $ map $_*2, ( 1,2,3 )
- $ARRAY1 = [
-             2,
-             4,
-             6
-           ];
+[
+  2,
+  4,
+  6
+];
 
  $
 

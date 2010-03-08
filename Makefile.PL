@@ -32,9 +32,17 @@ feature 'DDS plugin - better format results with Data::Dump::Streamer',
     -default => 1,
     'Data::Dump::Streamer' => 0;
 
+feature 'DDC plugin - even better format results with Data::Dumper::Concise',
+    -default => 1,
+    'Data::Dumper::Concise' => 0;
+
 feature 'INC completion driver - tab complete module names in use and require',
     -default => 0,
     'File::Next' => 0;
+
+feature 'Interrupt plugin - traps SIGINT to kill long-running lines',
+    -default => 1,
+    'Sys::SigAction' => 0;
 
 feature 'Keywords completion driver - tab complete Perl keywords and operators',
     -default => 0,

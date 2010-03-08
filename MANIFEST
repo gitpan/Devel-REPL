@@ -15,6 +15,7 @@ inc/Module/Install/WriteAll.pm
 lib/Devel/REPL.pm
 lib/Devel/REPL/Error.pm
 lib/Devel/REPL/Meta/Plugin.pm
+lib/Devel/REPL/Overview.pod
 lib/Devel/REPL/Plugin.pm
 lib/Devel/REPL/Plugin/B/Concise.pm
 lib/Devel/REPL/Plugin/Colors.pm
@@ -26,6 +27,7 @@ lib/Devel/REPL/Plugin/CompletionDriver/Keywords.pm
 lib/Devel/REPL/Plugin/CompletionDriver/LexEnv.pm
 lib/Devel/REPL/Plugin/CompletionDriver/Methods.pm
 lib/Devel/REPL/Plugin/CompletionDriver/Turtles.pm
+lib/Devel/REPL/Plugin/DDC.pm
 lib/Devel/REPL/Plugin/DDS.pm
 lib/Devel/REPL/Plugin/DumpHistory.pm
 lib/Devel/REPL/Plugin/FancyPrompt.pm
