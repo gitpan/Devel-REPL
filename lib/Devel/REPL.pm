@@ -5,7 +5,7 @@ use Moose;
 use namespace::clean -except => [ 'meta' ];
 use 5.008001; # backwards compat, doesn't warn like 5.8.1
 
-our $VERSION = '1.003009'; # 1.3.9
+our $VERSION = '1.003010';
 
 with 'MooseX::Object::Pluggable';
 
@@ -26,10 +26,16 @@ has 'out_fh' => (
   default => sub { shift->term->OUT || \*STDOUT; }
 );
 
+has 'exit_repl' => (
+  is => 'rw', required => 1,
+  default => sub { 0 }
+);
+
 sub run {
   my ($self) = @_;
   while ($self->run_once_safely) {
-    # keep looping
+    # keep looping unless we want to exit REPL
+    last if $self->exit_repl;
   }
 }
 
@@ -51,11 +57,11 @@ sub run_once {
   my ($self) = @_;
 
   my $line = $self->read;
-  return unless defined($line); # undefined value == EOF
+  return unless defined($line);     # undefined value == EOF
 
   my @ret = $self->formatted_eval($line);
 
-  $self->print(@ret);
+  $self->print(@ret) unless $self->exit_repl;
 
   return 1;
 }
@@ -180,8 +186,8 @@ message will be returned. Here are a few examples:
  1
  $_ nosuchfunction
  Compile error: Bareword "nosuchfunction" not allowed while "strict subs" in use at (eval 130) line 5.
-  
- $_ 
+
+ $_
 
 In the first example above you see the output of the command (C<Hello,
 world!>), if any, and then the return value of the statement (C<1>). Following
@@ -208,14 +214,14 @@ exported functions from that module are available for immediate use:
          (Do you need to predeclare carp?)
  Compile error: syntax error at (eval 129) line 5, near "carp "I'm dieeeing!\n""
  BEGIN not safe after errors--compilation aborted at (eval 129) line 5.
- 
- $_ use Carp 
-  
+
+ $_ use Carp
+
  $_ carp "I'm dieeeing!\n"
  I'm dieeeing!
   at /usr/share/perl5/Lexical/Persistence.pm line 327
  1
- $_ 
+ $_
 
 To quit from the shell, hit C<control+d> or C<control+c>.
 
