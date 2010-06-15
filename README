@@ -32,8 +32,8 @@ USAGE
      1
      $_ nosuchfunction
      Compile error: Bareword "nosuchfunction" not allowed while "strict subs" in use at (eval 130) line 5.
-      
- $_
+
+     $_
 
     In the first example above you see the output of the command ("Hello,
     world!"), if any, and then the return value of the statement (1).
@@ -61,16 +61,19 @@ USAGE
              (Do you need to predeclare carp?)
      Compile error: syntax error at (eval 129) line 5, near "carp "I'm dieeeing!\n""
      BEGIN not safe after errors--compilation aborted at (eval 129) line 5.
-     
- $_ use Carp 
-      
- $_ carp "I'm dieeeing!\n"
+
+     $_ use Carp
+
+     $_ carp "I'm dieeeing!\n"
      I'm dieeeing!
       at /usr/share/perl5/Lexical/Persistence.pm line 327
      1
      $_
 
-    To quit from the shell, hit "control+d" or "control+c".
+    To quit from the shell, hit "Ctrl+D" or "Ctrl+C".
+
+      MSWin32 NOTE: control keys won't work if TERM=dumb
+      because readline functionality will be disabled.
 
   Run Control Files
     For particular projects you might well end up running the same commands
@@ -152,19 +155,25 @@ REQUIREMENTS
     In addition to the contents of the standard Perl distribution, you will
     need the following:
 
-    *   Moose >= 0.64
+    *   Moose >= 0.74
 
     *   MooseX::Object::Pluggable >= 0.0009
 
-    *   MooseX::Getopt >= 0.15
+    *   MooseX::Getopt >= 0.18
 
-    *   MooseX::AttributeHelpers >= 0.14
+    *   MooseX::AttributeHelpers >= 0.16
 
     *   namespace::clean
 
     *   File::HomeDir
 
     *   Task::Weaken
+
+    *   B::Concise
+
+    *   Term::ANSIColor
+
+    *   Devel::Peek
 
     Optionally, some plugins if installed will require the following
     modules:
@@ -173,7 +182,11 @@ REQUIREMENTS
 
     *   Data::Dump::Streamer
 
+    *   Data::Dumper::Concise
+
     *   File::Next
+
+    *   Sys::SigAction
 
     *   B::Keywords
 
@@ -194,6 +207,10 @@ CONTRIBUTORS
     mgrimes - mgrimes (at) cpan dot org
     Shawn M Moore - sartak (at) gmail.com
     Oliver Gorwits - oliver on irc.perl.org
+    Andrew Moore - "<amoore@cpan.org>"
+    Norbert Buchmuller "<norbi@nix.hu>"
+    Dave Houston "<dhouston@cpan.org>"
+    Chris Marshall
 
 LICENSE
     This library is free software under the same terms as perl itself

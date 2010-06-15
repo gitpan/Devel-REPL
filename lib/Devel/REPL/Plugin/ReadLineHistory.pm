@@ -39,8 +39,16 @@ around 'run' => sub {
          close HIST;
       }
    }
-   $self->term->Attribs->{do_expand}=1;
+
+   $self->term->Attribs->{do_expand}=1;  # for Term::ReadLine::Gnu
+   $self->term->MinLine(2);              # don't save one letter commands
+
+   # let History plugin know we have Term::ReadLine support
+   $self->have_readline_history(1) if $self->can('have_readline_history');
+
+
    $self->$orig(@args);
+
    if ($self->term->ReadLine eq 'Term::ReadLine::Gnu') {
       $self->term->WriteHistory($hist_file) ||
       $self->print("warning: failed to write history file $hist_file");
@@ -63,6 +71,40 @@ __END__
 =head1 NAME
 
 Devel::REPL::Plugin::ReadLineHistory - Integrate history with the facilities provided by L<Term::ReadLine>
+
+=head1 DESCRIPTION
+
+This plugin enables loading and saving command line history from
+a file as well has history expansion of previous commands using
+the !-syntax a la bash.
+
+By default, history expansion is enabled with this plugin when
+using L<Term::ReadLine::Gnu|Term::ReadLine::Gnu>. That means that
+"loose" '!' characters will be treated as history events which
+may not be what you wish.
+
+To avoid this, you need to quote the '!' with '\':
+
+  my $var = "foo\!";
+
+or place the arguments in single quotes---but enable the
+C<Term::ReadLine> attribute C<history_quotes_inhibit_expansion>:
+
+  $_REPL->term->Attribs->{history_quotes_inhibit_expansion} = 1;
+  my $var = 'foo!';
+
+and to disable history expansion from GNU readline/history do
+
+  $_REPL->term->Attribs->{do_expand} = 0;
+
+=head1 CONFLICTS
+
+Note that Term::ReadLine::Perl does not support a history
+expansion method.  In that case, you may wish to use the
+Devel::REPL History plugin which provides similar functions.
+Work is underway to make use of either History or
+ReadLineHistory consistent for expansion with either the
+Term::ReadLine::Gnu support or Term::ReadLine::Perl.
 
 =cut
 
