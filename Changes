@@ -1,3 +1,5 @@
+1.003012
+  - Remove some old code to avoid a future Moose warning
 1.003011
   - History plugin now works for Term::ReadLine::Perl
   - Add ReadLine file completion if no other matches, fixes rt.cpan#58351
