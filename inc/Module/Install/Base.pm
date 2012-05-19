@@ -4,7 +4,7 @@ package Module::Install::Base;
 use strict 'vars';
 use vars qw{$VERSION};
 BEGIN {
-	$VERSION = '1.00';
+	$VERSION = '0.91';
 }
 
 # Suspend handler for "redefined" warnings
@@ -51,17 +51,12 @@ sub admin {
 #line 106
 
 sub is_admin {
-	! $_[0]->admin->isa('Module::Install::Base::FakeAdmin');
+	$_[0]->admin->VERSION;
 }
 
 sub DESTROY {}
 
 package Module::Install::Base::FakeAdmin;
-
-use vars qw{$VERSION};
-BEGIN {
-	$VERSION = $Module::Install::Base::VERSION;
-}
 
 my $fake;
 
@@ -80,4 +75,4 @@ BEGIN {
 
 1;
 
-#line 159
+#line 154

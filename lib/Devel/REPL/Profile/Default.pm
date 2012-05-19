@@ -5,9 +5,21 @@ use namespace::clean -except => [ 'meta' ];
 
 with 'Devel::REPL::Profile';
 
-sub plugins {
-  qw(History LexEnv DDS Packages Commands MultiLine::PPI);
-}
+sub plugins { qw(
+  Colors
+  Completion
+  CompletionDriver::INC
+  CompletionDriver::LexEnv
+  CompletionDriver::Keywords
+  CompletionDriver::Methods
+  History
+  LexEnv
+  DDS
+  Packages
+  Commands
+  MultiLine::PPI
+  ReadLineHistory
+);}
 
 sub apply_profile {
   my ($self, $repl) = @_;

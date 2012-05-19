@@ -5,7 +5,7 @@ use Moose;
 use namespace::clean -except => [ 'meta' ];
 use 5.008001; # backwards compat, doesn't warn like 5.8.1
 
-our $VERSION = '1.003012';
+our $VERSION = '1.003013';
 
 with 'MooseX::Object::Pluggable';
 
@@ -287,6 +287,34 @@ L<Devel::REPL::Plugin::Commands>
 
 L<Devel::REPL::Plugin::MultiLine::PPI>
 
+=item *
+
+L<Devel::REPL::Plugin::Colors>
+
+=item *
+
+L<Devel::REPL::Plugin::Completion>
+
+=item *
+
+L<Devel::REPL::Plugin::CompletionDriver::INC>
+
+=item *
+
+L<Devel::REPL::Plugin::CompletionDriver::LexEnv>
+
+=item *
+
+L<Devel::REPL::Plugin::CompletionDriver::Keywords>
+
+=item *
+
+L<Devel::REPL::Plugin::CompletionDriver::Methods>
+
+=item *
+
+L<Devel::REPL::Plugin::ReadlineHistory>
+
 =back
 
 =head2 Plugins
@@ -299,7 +327,9 @@ output, or even add commands to the shell environment.
 
 A number of plugins ship with C<Devel::REPL>, and more are available on the
 CPAN. Some of the shipped plugins are loaded in the default profile, mentioned
-above.
+above.  These plugins can be loaded in your C<< $HOME/.re.pl/repl.rc >> like:
+
+  load_plugin qw( CompletionDriver::Global DumpHistory );
 
 Writing your own plugins is not difficult, and is discussed in the
 L<Devel::REPL::Plugin> manual page, along with links to the manual pages of
