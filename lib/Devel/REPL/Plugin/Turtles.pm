@@ -3,9 +3,7 @@ use Devel::REPL::Plugin;
 
 use Scalar::Util qw(reftype);
 
-use MooseX::AttributeHelpers;
-
-use namespace::clean -except => [ 'meta' ];
+use namespace::autoclean;
 
 has default_command_prefix => (
   isa => "RegexpRef",
@@ -19,8 +17,8 @@ has turtles_matchers => (
   is  => "rw",
   lazy => 1,
   default => sub { my $prefix = shift->default_command_prefix; [qr/^ $prefix (\w+) \s* (.*) /x] },
-  provides => {
-    unshift => "add_turtles_matcher",
+  handles => {
+    add_turtles_matcher => 'unshift',
   },
 );
 

@@ -39,9 +39,9 @@ lib/Devel/REPL/Plugin/MultiLine/PPI.pm
 lib/Devel/REPL/Plugin/NewlineHack.pm
 lib/Devel/REPL/Plugin/Nopaste.pm
 lib/Devel/REPL/Plugin/OutputCache.pm
-lib/Devel/REPL/Plugin/PPI.pm
 lib/Devel/REPL/Plugin/Packages.pm
 lib/Devel/REPL/Plugin/Peek.pm
+lib/Devel/REPL/Plugin/PPI.pm
 lib/Devel/REPL/Plugin/ReadLineHistory.pm
 lib/Devel/REPL/Plugin/Refresh.pm
 lib/Devel/REPL/Plugin/ShowClass.pm
@@ -51,9 +51,9 @@ lib/Devel/REPL/Profile.pm
 lib/Devel/REPL/Profile/Default.pm
 lib/Devel/REPL/Profile/Minimal.pm
 lib/Devel/REPL/Script.pm
+Makefile.PL
 MANIFEST			This list of files
 META.yml
-Makefile.PL
 README
 script/re.pl
 t/load_core.t
