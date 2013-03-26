@@ -4,7 +4,8 @@ author:
   - 'Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co.uk/>)'
 build_requires:
   ExtUtils::MakeMaker: 6.59
-  Test::More: 0
+  Test::More: 0.88
+  Test::Warnings: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.59
 distribution_type: module
@@ -31,6 +32,7 @@ requires:
   File::Next: 0
   File::Spec: 0
   Lexical::Persistence: 0
+  Module::Refresh: 0
   Moose: 0.93
   MooseX::Getopt: 0.18
   MooseX::Object::Pluggable: 0.0009
@@ -44,4 +46,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://git.shadowcat.co.uk/Devel-REPL.git
-version: 1.003015
+version: 1.003016

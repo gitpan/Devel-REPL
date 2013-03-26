@@ -1,5 +1,9 @@
 Revision history for Devel-REPL
 
+1.003016 - 2013-03-26
+  - make all plugins load again by using native traits (thanks, Zaki Mughal!)
+    (RT#84011)
+
 1.003015 - 2013-03-01
   - fix "Attempt to use reference as lvalue in substr" warning on perl 5.16
     (thanks, ilmari!)

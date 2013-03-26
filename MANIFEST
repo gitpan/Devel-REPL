@@ -58,3 +58,4 @@ META.yml
 README
 script/re.pl
 t/load_core.t
+t/load_plugins.t
