@@ -46,4 +46,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://git.shadowcat.co.uk/Devel-REPL.git
-version: 1.003017
+version: 1.003018

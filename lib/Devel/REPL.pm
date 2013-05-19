@@ -5,29 +5,31 @@ use Moose;
 use namespace::autoclean;
 use 5.008001; # backwards compat, doesn't warn like 5.8.1
 
-our $VERSION = '1.003017';
+our $VERSION = '1.003018';
 
 with 'MooseX::Object::Pluggable';
 
 use Devel::REPL::Error;
 
 has 'term' => (
-  is => 'rw', required => 1,
+  is => 'rw',
+  lazy => 1,
   default => sub { Term::ReadLine->new('Perl REPL') }
 );
 
 has 'prompt' => (
-  is => 'rw', required => 1,
+  is => 'rw',
   default => sub { '$ ' }
 );
 
 has 'out_fh' => (
-  is => 'rw', required => 1, lazy => 1,
+  is => 'rw',
+  lazy => 1,
   default => sub { shift->term->OUT || \*STDOUT; }
 );
 
 has 'exit_repl' => (
-  is => 'rw', required => 1,
+  is => 'rw',
   default => sub { 0 }
 );
 
@@ -467,6 +469,8 @@ Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co
 =item Dave Houston C<< <dhouston@cpan.org> >>
 
 =item Chris Marshall
+
+=item Karen Etheridge C<< <ether@cpan.org> >>
 
 =back
 
