@@ -21,23 +21,21 @@ no_index:
     - examples
     - inc
     - t
+recommends:
+  PPI::XS: 0.902
 requires:
   App::Nopaste: 0
   B::Concise: 0
   B::Keywords: 0
-  Data::Dump::Streamer: 0
-  Data::Dumper::Concise: 0
   Devel::Peek: 0
   File::HomeDir: 0
   File::Next: 0
   File::Spec: 0
-  Lexical::Persistence: 0
   Module::Refresh: 0
   Moose: 0.93
   MooseX::Getopt: 0.18
   MooseX::Object::Pluggable: 0.0009
   PPI: 0
-  Sys::SigAction: 0
   Task::Weaken: 0
   Term::ANSIColor: 0
   Term::ReadLine: 0
@@ -46,4 +44,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://git.shadowcat.co.uk/Devel-REPL.git
-version: 1.003018
+version: 1.003019
