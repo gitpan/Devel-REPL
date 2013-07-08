@@ -31,7 +31,6 @@ requires:
   File::HomeDir: 0
   File::Next: 0
   File::Spec: 0
-  Module::Refresh: 0
   Moose: 0.93
   MooseX::Getopt: 0.18
   MooseX::Object::Pluggable: 0.0009
@@ -44,4 +43,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://git.shadowcat.co.uk/Devel-REPL.git
-version: 1.003019
+version: 1.003020
