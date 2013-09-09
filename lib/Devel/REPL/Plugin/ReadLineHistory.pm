@@ -3,7 +3,15 @@
 #
 # epitaph, 22nd April 2007
 
+use strict;
+use warnings;
 package Devel::REPL::Plugin::ReadLineHistory;
+BEGIN {
+  $Devel::REPL::Plugin::ReadLineHistory::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::ReadLineHistory::VERSION = '1.003021';
+}
 
 use Devel::REPL::Plugin;
 use File::HomeDir;

@@ -1,10 +1,18 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::DumpHistory;
+BEGIN {
+  $Devel::REPL::Plugin::DumpHistory::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::DumpHistory::VERSION = '1.003021';
+}
 
 use Devel::REPL::Plugin;
 use namespace::autoclean;
 
 ## Seems to be a sequence issue with requires
-# requires qw{ history }; 
+# requires qw{ history };
 
 around 'read' => sub {
   my $orig = shift;
@@ -48,9 +56,6 @@ the history.
 
 =head1 SYNOPSIS
 
-    #!/usr/bin/perl 
-
-    use lib './lib';
     use Devel::REPL;
 
     my $repl = Devel::REPL->new;
@@ -61,7 +66,7 @@ the history.
 
 =head1 DESCRIPTION
 
-Plugin that adds the C<:dump> and C<:dump file_name> commands to the 
+Plugin that adds the C<:dump> and C<:dump file_name> commands to the
 repl which will print the history to STDOUT or append the history to the
 file given.
 

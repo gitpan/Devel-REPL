@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::Nopaste;
+BEGIN {
+  $Devel::REPL::Plugin::Nopaste::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::Nopaste::VERSION = '1.003021';
+}
 
 use Devel::REPL::Plugin;
 use Moose::Util::TypeConstraints;

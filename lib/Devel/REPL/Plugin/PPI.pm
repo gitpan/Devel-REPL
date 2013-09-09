@@ -1,6 +1,12 @@
-#!/usr/bin/perl
-
+use strict;
+use warnings;
 package Devel::REPL::Plugin::PPI;
+BEGIN {
+  $Devel::REPL::Plugin::PPI::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::PPI::VERSION = '1.003021';
+}
 use Devel::REPL::Plugin;
 
 use PPI;
@@ -37,7 +43,7 @@ Devel::REPL::Plugin::PPI - PPI dumping of Perl code
   PPI::Document
     PPI::Statement
       PPI::Token::Word    'Devel::REPL'
-        
+
   repl> #ppi {
   > warn $];
   > }

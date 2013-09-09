@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::FancyPrompt;
+BEGIN {
+  $Devel::REPL::Plugin::FancyPrompt::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::FancyPrompt::VERSION = '1.003021';
+}
 
 use Devel::REPL::Plugin;
 use namespace::autoclean;
@@ -63,9 +71,6 @@ Devel::REPL::Plugin::FancyPrompt - facilitate user-defined prompts
 
 =head1 SYNOPSIS
 
-    #!/usr/bin/perl 
-
-    use lib './lib';
     use Devel::REPL;
 
     my $repl = Devel::REPL->new;

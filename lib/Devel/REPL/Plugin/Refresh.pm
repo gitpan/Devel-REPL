@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::Refresh;
+BEGIN {
+  $Devel::REPL::Plugin::Refresh::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::Refresh::VERSION = '1.003021';
+}
 
 use Devel::REPL::Plugin;
 use namespace::autoclean;

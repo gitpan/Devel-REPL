@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::DDC;
+BEGIN {
+  $Devel::REPL::Plugin::DDC::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::DDC::VERSION = '1.003021';
+}
 
 use Devel::REPL::Plugin;
 use Data::Dumper::Concise ();

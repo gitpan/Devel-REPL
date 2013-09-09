@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::MultiLine::PPI;
+BEGIN {
+  $Devel::REPL::Plugin::MultiLine::PPI::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::MultiLine::PPI::VERSION = '1.003021';
+}
 
 use Devel::REPL::Plugin;
 use PPI;
@@ -88,9 +96,6 @@ Devel::REPL::Plugin::MultiLine::PPI - read lines until all blocks are closed
 
 =head1 SYNOPSIS
 
-    #!/usr/bin/perl 
-
-    use lib './lib';
     use Devel::REPL;
 
     my $repl = Devel::REPL->new;

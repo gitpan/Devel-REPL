@@ -1,6 +1,10 @@
-#!/usr/bin/perl
-
 package Devel::REPL::Error;
+BEGIN {
+  $Devel::REPL::Error::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Error::VERSION = '1.003021';
+}
 use Moose;
 
 # FIXME get nothingmuch to refactor and release his useful error object

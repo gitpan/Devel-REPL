@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::Turtles;
+BEGIN {
+  $Devel::REPL::Plugin::Turtles::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::Turtles::VERSION = '1.003021';
+}
 use Devel::REPL::Plugin;
 
 use Scalar::Util qw(reftype);

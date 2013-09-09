@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::CompletionDriver::Globals;
+BEGIN {
+  $Devel::REPL::Plugin::CompletionDriver::Globals::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::CompletionDriver::Globals::VERSION = '1.003021';
+}
 use Devel::REPL::Plugin;
 use namespace::autoclean;
 

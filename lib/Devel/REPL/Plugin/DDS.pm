@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::DDS;
+BEGIN {
+  $Devel::REPL::Plugin::DDS::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::DDS::VERSION = '1.003021';
+}
 
 use Devel::REPL::Plugin;
 use Data::Dump::Streamer ();

@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::CompletionDriver::Turtles;
+BEGIN {
+  $Devel::REPL::Plugin::CompletionDriver::Turtles::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::CompletionDriver::Turtles::VERSION = '1.003021';
+}
 use Devel::REPL::Plugin;
 use namespace::autoclean;
 

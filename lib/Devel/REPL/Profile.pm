@@ -1,4 +1,10 @@
 package Devel::REPL::Profile;
+BEGIN {
+  $Devel::REPL::Profile::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Profile::VERSION = '1.003021';
+}
 
 use Moose::Role;
 
@@ -11,17 +17,17 @@ Devel::REPL::Profile
 =head1 SYNOPSIS
 
  package Devel::REPL::Profile::MyProject;
- 
+
  use Moose;
  use namespace::autoclean;
- 
+
  with 'Devel::REPL::Profile';
- 
+
  sub apply_profile {
      my ($self, $repl) = @_;
      # do something here
  }
- 
+
  1;
 
 =head1 DESCRIPTION

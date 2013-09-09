@@ -1,11 +1,17 @@
 package Devel::REPL;
+BEGIN {
+  $Devel::REPL::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::VERSION = '1.003021';
+}
+# git description: v1.003020-13-g7403333
+
 
 use Term::ReadLine;
 use Moose;
 use namespace::autoclean;
 use 5.008001; # backwards compat, doesn't warn like 5.8.1
-
-our $VERSION = '1.003020';
 
 with 'MooseX::Object::Pluggable';
 

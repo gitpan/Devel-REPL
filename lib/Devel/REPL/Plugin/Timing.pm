@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::Timing;
+BEGIN {
+  $Devel::REPL::Plugin::Timing::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::Timing::VERSION = '1.003021';
+}
 
 use Devel::REPL::Plugin;
 use Time::HiRes 'time';

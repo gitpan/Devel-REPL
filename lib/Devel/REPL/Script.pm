@@ -1,11 +1,19 @@
 package Devel::REPL::Script;
+BEGIN {
+  $Devel::REPL::Script::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Script::VERSION = '1.003021';
+}
 
 use Moose;
 use Devel::REPL;
 use File::HomeDir;
 use File::Spec;
-use vars qw($CURRENT_SCRIPT);
+use Module::Runtime 'use_module';
 use namespace::autoclean;
+
+our $CURRENT_SCRIPT;
 
 with 'MooseX::Getopt';
 
@@ -34,7 +42,7 @@ sub BUILD {
 sub load_profile {
   my ($self, $profile) = @_;
   $profile = "Devel::REPL::Profile::${profile}" unless $profile =~ /::/;
-  Class::MOP::load_class($profile);
+  use_module $profile;
   confess "Profile class ${profile} doesn't do 'Devel::REPL::Profile'"
     unless $profile->does('Devel::REPL::Profile');
   $profile->new->apply_profile($self->_repl);

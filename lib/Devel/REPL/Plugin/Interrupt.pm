@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::Interrupt;
+BEGIN {
+  $Devel::REPL::Plugin::Interrupt::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::Interrupt::VERSION = '1.003021';
+}
 
 use Devel::REPL::Plugin;
 use Sys::SigAction qw(set_sig_handler);

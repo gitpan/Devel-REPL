@@ -1,4 +1,13 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::Completion;
+BEGIN {
+  $Devel::REPL::Plugin::Completion::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::Completion::VERSION = '1.003021';
+}
+
 use Devel::REPL::Plugin;
 use Scalar::Util 'weaken';
 use PPI;

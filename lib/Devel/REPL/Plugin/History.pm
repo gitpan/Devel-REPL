@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::History;
+BEGIN {
+  $Devel::REPL::Plugin::History::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::History::VERSION = '1.003021';
+}
 
 use Devel::REPL::Plugin;
 use namespace::autoclean;

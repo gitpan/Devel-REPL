@@ -1,6 +1,12 @@
-#!/usr/bin/perl
-
+use strict;
+use warnings;
 package Devel::REPL::Plugin::Peek;
+BEGIN {
+  $Devel::REPL::Plugin::Peek::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::Peek::VERSION = '1.003021';
+}
 use Devel::REPL::Plugin;
 
 use Devel::Peek qw(Dump);

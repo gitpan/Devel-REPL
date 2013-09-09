@@ -3,14 +3,16 @@ abstract: 'a modern perl interactive shell'
 author:
   - 'Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co.uk/>)'
 build_requires:
-  ExtUtils::MakeMaker: 6.59
-  Test::More: 0.88
+  CPAN::Meta::Check: 0.007
+  IO::Handle: 0
+  IPC::Open3: 0
+  Test::CheckDeps: 0.006
+  Test::More: 0.94
   Test::Warnings: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.59
-distribution_type: module
-dynamic_config: 1
-generated_by: 'Module::Install version 1.06'
+  Module::Build::Tiny: 0.026
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300038, CPAN::Meta::Converter version 2.132510'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,29 +20,565 @@ meta-spec:
 name: Devel-REPL
 no_index:
   directory:
-    - examples
-    - inc
     - t
+    - xt
+    - examples
+optional_features:
+  Completion:
+    description: 'Completion plugin - extensible tab completion'
+    requires:
+      PPI: 0
+  DDC:
+    description: 'DDC plugin - even better format results with Data::Dumper::Concise'
+    requires:
+      Data::Dumper::Concise: 0
+  DDS:
+    description: 'DDS plugin - better format results with Data::Dump::Streamer'
+    requires:
+      Data::Dump::Streamer: 0
+  INC_completion:
+    description: 'INC completion driver - tab complete module names in use and require'
+    requires:
+      File::Next: 0
+  Interrupt:
+    description: 'Interrupt plugin - traps SIGINT to kill long-running lines'
+    requires:
+      Sys::SigAction: 0
+  Keywords_completion:
+    description: 'Keywords completion driver - tab complete Perl keywords and operators'
+    requires:
+      B::Keywords: 0
+  LexEnv:
+    description: "LexEnv plugin - variables declared with \"my\" persist between statements"
+    requires:
+      Lexical::Persistence: 0
+  MultiLine:
+    description: 'MultiLine::PPI plugin - continue reading lines until all blocks are closed'
+    requires:
+      PPI: 0
+  Nopaste:
+    description: "Nopaste plugin - upload a session\\'s input and output to a Pastebin"
+    requires:
+      App::Nopaste: 0
+  PPI:
+    description: 'PPI plugin - PPI dumping of Perl code'
+    requires:
+      PPI: 0
+  Refresh:
+    description: 'Refresh plugin - automatically reload libraries with Module::Refresh'
+    requires:
+      Module::Refresh: 0
+provides:
+  Devel::REPL:
+    file: lib/Devel/REPL.pm
+    version: 1.003021
+  Devel::REPL::Error:
+    file: lib/Devel/REPL/Error.pm
+    version: 1.003021
+  Devel::REPL::Meta::Plugin:
+    file: lib/Devel/REPL/Meta/Plugin.pm
+    version: 1.003021
+  Devel::REPL::Plugin:
+    file: lib/Devel/REPL/Plugin.pm
+    version: 1.003021
+  Devel::REPL::Plugin::B::Concise:
+    file: lib/Devel/REPL/Plugin/B/Concise.pm
+    version: 1.003021
+  Devel::REPL::Plugin::Colors:
+    file: lib/Devel/REPL/Plugin/Colors.pm
+    version: 1.003021
+  Devel::REPL::Plugin::Commands:
+    file: lib/Devel/REPL/Plugin/Commands.pm
+    version: 1.003021
+  Devel::REPL::Plugin::Completion:
+    file: lib/Devel/REPL/Plugin/Completion.pm
+    version: 1.003021
+  Devel::REPL::Plugin::CompletionDriver::Globals:
+    file: lib/Devel/REPL/Plugin/CompletionDriver/Globals.pm
+    version: 1.003021
+  Devel::REPL::Plugin::CompletionDriver::INC:
+    file: lib/Devel/REPL/Plugin/CompletionDriver/INC.pm
+    version: 1.003021
+  Devel::REPL::Plugin::CompletionDriver::Keywords:
+    file: lib/Devel/REPL/Plugin/CompletionDriver/Keywords.pm
+    version: 1.003021
+  Devel::REPL::Plugin::CompletionDriver::LexEnv:
+    file: lib/Devel/REPL/Plugin/CompletionDriver/LexEnv.pm
+    version: 1.003021
+  Devel::REPL::Plugin::CompletionDriver::Methods:
+    file: lib/Devel/REPL/Plugin/CompletionDriver/Methods.pm
+    version: 1.003021
+  Devel::REPL::Plugin::CompletionDriver::Turtles:
+    file: lib/Devel/REPL/Plugin/CompletionDriver/Turtles.pm
+    version: 1.003021
+  Devel::REPL::Plugin::DDC:
+    file: lib/Devel/REPL/Plugin/DDC.pm
+    version: 1.003021
+  Devel::REPL::Plugin::DDS:
+    file: lib/Devel/REPL/Plugin/DDS.pm
+    version: 1.003021
+  Devel::REPL::Plugin::DumpHistory:
+    file: lib/Devel/REPL/Plugin/DumpHistory.pm
+    version: 1.003021
+  Devel::REPL::Plugin::FancyPrompt:
+    file: lib/Devel/REPL/Plugin/FancyPrompt.pm
+    version: 1.003021
+  Devel::REPL::Plugin::FindVariable:
+    file: lib/Devel/REPL/Plugin/FindVariable.pm
+    version: 1.003021
+  Devel::REPL::Plugin::History:
+    file: lib/Devel/REPL/Plugin/History.pm
+    version: 1.003021
+  Devel::REPL::Plugin::Interrupt:
+    file: lib/Devel/REPL/Plugin/Interrupt.pm
+    version: 1.003021
+  Devel::REPL::Plugin::LexEnv:
+    file: lib/Devel/REPL/Plugin/LexEnv.pm
+    version: 1.003021
+  Devel::REPL::Plugin::MultiLine::PPI:
+    file: lib/Devel/REPL/Plugin/MultiLine/PPI.pm
+    version: 1.003021
+  Devel::REPL::Plugin::Nopaste:
+    file: lib/Devel/REPL/Plugin/Nopaste.pm
+    version: 1.003021
+  Devel::REPL::Plugin::OutputCache:
+    file: lib/Devel/REPL/Plugin/OutputCache.pm
+    version: 1.003021
+  Devel::REPL::Plugin::PPI:
+    file: lib/Devel/REPL/Plugin/PPI.pm
+    version: 1.003021
+  Devel::REPL::Plugin::Packages:
+    file: lib/Devel/REPL/Plugin/Packages.pm
+    version: 1.003021
+  Devel::REPL::Plugin::Packages::DefaultScratchpad:
+    file: lib/Devel/REPL/Plugin/Packages.pm
+    version: 1.003021
+  Devel::REPL::Plugin::Peek:
+    file: lib/Devel/REPL/Plugin/Peek.pm
+    version: 1.003021
+  Devel::REPL::Plugin::ReadLineHistory:
+    file: lib/Devel/REPL/Plugin/ReadLineHistory.pm
+    version: 1.003021
+  Devel::REPL::Plugin::Refresh:
+    file: lib/Devel/REPL/Plugin/Refresh.pm
+    version: 1.003021
+  Devel::REPL::Plugin::ShowClass:
+    file: lib/Devel/REPL/Plugin/ShowClass.pm
+    version: 1.003021
+  Devel::REPL::Plugin::Timing:
+    file: lib/Devel/REPL/Plugin/Timing.pm
+    version: 1.003021
+  Devel::REPL::Plugin::Turtles:
+    file: lib/Devel/REPL/Plugin/Turtles.pm
+    version: 1.003021
+  Devel::REPL::Profile:
+    file: lib/Devel/REPL/Profile.pm
+    version: 1.003021
+  Devel::REPL::Profile::Default:
+    file: lib/Devel/REPL/Profile/Default.pm
+    version: 1.003021
+  Devel::REPL::Profile::Minimal:
+    file: lib/Devel/REPL/Profile/Minimal.pm
+    version: 1.003021
+  Devel::REPL::Script:
+    file: lib/Devel/REPL/Script.pm
+    version: 1.003021
 recommends:
-  PPI::XS: 0.902
-requires:
   App::Nopaste: 0
-  B::Concise: 0
   B::Keywords: 0
+  Data::Dump::Streamer: 0
+  Data::Dumper::Concise: 0
+  File::Next: 0
+  Lexical::Persistence: 0
+  Module::Refresh: 0
+  PPI: 0
+  PPI::XS: 0.902
+  Sys::SigAction: 0
+requires:
+  B::Concise: 0
   Devel::Peek: 0
   File::HomeDir: 0
-  File::Next: 0
   File::Spec: 0
+  Module::Runtime: 0
   Moose: 0.93
   MooseX::Getopt: 0.18
   MooseX::Object::Pluggable: 0.0009
-  PPI: 0
   Task::Weaken: 0
   Term::ANSIColor: 0
   Term::ReadLine: 0
   namespace::autoclean: 0
-  perl: 5.8.1
+  perl: 5.008001
 resources:
-  license: http://dev.perl.org/licenses/
-  repository: git://git.shadowcat.co.uk/Devel-REPL.git
-version: 1.003020
+  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Devel-REPL
+  repository: git://git.shadowcat.co.uk/p5sagit/Devel-REPL.git
+version: 1.003021
+x_Dist_Zilla:
+  perl:
+    version: 5.019003
+  plugins:
+    -
+      class: Dist::Zilla::Plugin::Git::NextVersion
+      name: '@Author::ETHER/Git::NextVersion'
+      version: 2.014
+    -
+      class: Dist::Zilla::Plugin::PromptIfStale
+      name: '@Author::ETHER/build'
+      version: 0.003
+    -
+      class: Dist::Zilla::Plugin::PromptIfStale
+      name: '@Author::ETHER/release'
+      version: 0.003
+    -
+      class: Dist::Zilla::Plugin::ExecDir
+      name: '@Author::ETHER/ExecDir'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::ShareDir
+      name: '@Author::ETHER/ShareDir'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::FileFinder::ByName
+      name: '@Author::ETHER/Examples'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::Git::GatherDir
+      name: '@Author::ETHER/Git::GatherDir'
+      version: 2.014
+    -
+      class: Dist::Zilla::Plugin::MetaYAML
+      name: '@Author::ETHER/MetaYAML'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::MetaJSON
+      name: '@Author::ETHER/MetaJSON'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::License
+      name: '@Author::ETHER/License'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::Readme
+      name: '@Author::ETHER/Readme'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::Manifest
+      name: '@Author::ETHER/Manifest'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::Test::Compile
+      config:
+        Dist::Zilla::Plugin::Test::Compile:
+          module_finder:
+            - ':InstallModules'
+          script_finder:
+            - ':ExecFiles'
+            - '@Author::ETHER/Examples'
+      name: '@Author::ETHER/Test::Compile'
+      version: 2.027
+    -
+      class: Dist::Zilla::Plugin::Test::CheckDeps
+      name: '@Author::ETHER/Test::CheckDeps'
+      version: 0.007
+    -
+      class: Dist::Zilla::Plugin::NoTabsTests
+      name: '@Author::ETHER/NoTabsTests'
+      version: 0.01
+    -
+      class: Dist::Zilla::Plugin::EOLTests
+      name: '@Author::ETHER/EOLTests'
+      version: 0.02
+    -
+      class: Dist::Zilla::Plugin::MetaTests
+      name: '@Author::ETHER/MetaTests'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::Test::Version
+      name: '@Author::ETHER/Test::Version'
+      version: 0.002004
+    -
+      class: Dist::Zilla::Plugin::Test::CPAN::Changes
+      name: '@Author::ETHER/Test::CPAN::Changes'
+      version: 0.008
+    -
+      class: Dist::Zilla::Plugin::Test::ChangesHasContent
+      name: '@Author::ETHER/Test::ChangesHasContent'
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::Test::MinimumVersion
+      name: '@Author::ETHER/Test::MinimumVersion'
+      version: 2.000005
+    -
+      class: Dist::Zilla::Plugin::PodSyntaxTests
+      name: '@Author::ETHER/PodSyntaxTests'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::Test::Pod::No404s
+      name: '@Author::ETHER/Test::Pod::No404s'
+      version: 1.001
+    -
+      class: Dist::Zilla::Plugin::Test::Kwalitee
+      name: '@Author::ETHER/Test::Kwalitee'
+      version: 2.06
+    -
+      class: Dist::Zilla::Plugin::MojibakeTests
+      name: '@Author::ETHER/MojibakeTests'
+      version: 0.5
+    -
+      class: Dist::Zilla::Plugin::PruneCruft
+      name: '@Author::ETHER/PruneCruft'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::ManifestSkip
+      name: '@Author::ETHER/ManifestSkip'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::Git::Describe
+      name: '@Author::ETHER/Git::Describe'
+      version: 0.003
+    -
+      class: Dist::Zilla::Plugin::PkgVersion
+      name: '@Author::ETHER/PkgVersion'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::NextRelease
+      name: '@Author::ETHER/NextRelease'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::AutoMetaResources
+      name: '@Author::ETHER/AutoMetaResources'
+      version: 1.20
+    -
+      class: Dist::Zilla::Plugin::Authority
+      name: '@Author::ETHER/Authority'
+      version: 1.006
+    -
+      class: Dist::Zilla::Plugin::MetaNoIndex
+      name: '@Author::ETHER/MetaNoIndex'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::MetaProvides::Package
+      name: '@Author::ETHER/MetaProvides::Package'
+      version: 1.14000003
+    -
+      class: Dist::Zilla::Plugin::MetaConfig
+      name: '@Author::ETHER/MetaConfig'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::MinimumPerl
+      name: '@Author::ETHER/MinimumPerl'
+      version: 1.003
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: test
+          type: requires
+      name: '@Author::ETHER/Test::CheckDeps, indirect'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: develop
+          type: requires
+      name: '@Author::ETHER/installer_requirements'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::ReadmeAnyFromPod
+      name: '@Author::ETHER/ReadmeAnyFromPod'
+      version: 0.131500
+    -
+      class: Dist::Zilla::Plugin::ModuleBuildTiny
+      name: '@Author::ETHER/ModuleBuildTiny'
+      version: 0.005
+    -
+      class: Dist::Zilla::Plugin::InstallGuide
+      name: '@Author::ETHER/InstallGuide'
+      version: 1.200000
+    -
+      class: Dist::Zilla::Plugin::CopyFilesFromBuild
+      name: '@Author::ETHER/CopyFilesFromBuild'
+      version: 0.103510
+    -
+      class: Dist::Zilla::Plugin::Run::AfterBuild
+      name: '@Author::ETHER/Run::AfterBuild'
+      version: 0.020
+    -
+      class: Dist::Zilla::Plugin::RunExtraTests
+      name: '@Author::ETHER/RunExtraTests'
+      version: 0.011
+    -
+      class: Dist::Zilla::Plugin::Git::Check
+      name: '@Author::ETHER/Git::Check'
+      version: 2.014
+    -
+      class: Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts
+      name: '@Author::ETHER/Git::CheckFor::MergeConflicts'
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch
+      name: '@Author::ETHER/Git::CheckFor::CorrectBranch'
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::Git::Remote::Check
+      name: '@Author::ETHER/Git::Remote::Check'
+      version: 0.1.2
+    -
+      class: Dist::Zilla::Plugin::CheckPrereqsIndexed
+      name: '@Author::ETHER/CheckPrereqsIndexed'
+      version: 0.009
+    -
+      class: Dist::Zilla::Plugin::TestRelease
+      name: '@Author::ETHER/TestRelease'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::UploadToCPAN
+      name: '@Author::ETHER/UploadToCPAN'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::Git::Commit
+      name: '@Author::ETHER/Git::Commit'
+      version: 2.014
+    -
+      class: Dist::Zilla::Plugin::Git::Tag
+      name: '@Author::ETHER/Git::Tag'
+      version: 2.014
+    -
+      class: Dist::Zilla::Plugin::Git::Push
+      name: '@Author::ETHER/Git::Push'
+      version: 2.014
+    -
+      class: Dist::Zilla::Plugin::InstallRelease
+      name: '@Author::ETHER/InstallRelease'
+      version: 0.008
+    -
+      class: Dist::Zilla::Plugin::ConfirmRelease
+      name: '@Author::ETHER/ConfirmRelease'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::ExecDir
+      name: ExecDir
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::ContributorsFromGit
+      name: ContributorsFromGit
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: runtime
+          type: requires
+      name: RuntimeRequires
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: test
+          type: requires
+      name: TestRequires
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: runtime
+          type: recommends
+      name: RuntimeRecommends
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::OptionalFeature
+      name: Completion
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::OptionalFeature
+      name: DDS
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::OptionalFeature
+      name: DDC
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::OptionalFeature
+      name: INC_completion
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::OptionalFeature
+      name: Interrupt
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::OptionalFeature
+      name: Keywords_completion
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::OptionalFeature
+      name: LexEnv
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::OptionalFeature
+      name: MultiLine
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::OptionalFeature
+      name: Nopaste
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::OptionalFeature
+      name: PPI
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::OptionalFeature
+      name: Refresh
+      version: 0.006
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':InstallModules'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':IncModules'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':TestFiles'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':ExecFiles'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':ShareFiles'
+      version: 4.300038
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':MainModule'
+      version: 4.300038
+  zilla:
+    class: Dist::Zilla::Dist::Builder
+    config:
+      is_trial: 0
+    version: 4.300038
+x_authority: cpan:PHAYLON
+x_contributors:
+  - "Arthur Axel 'fREW' Schmidt <frioux@gmail.com>"
+  - 'Ash Berlin <ash_github@firemirror.com>'
+  - 'Chris Marshall <devel.chm.01@gmail.com>'
+  - 'Dagfinn Ilmari Mannsåker <ilmari@ilmari.org>'
+  - 'Dave Houston <dave.houston@gmail.com>'
+  - 'Jesse Luehrs <doy@tozt.net>'
+  - 'Justin Hunter <justin.d.hunter@gmail.com>'
+  - 'Karen Etheridge <ether@cpan.org>'
+  - 'Matt S Trout <mst@shadowcat.co.uk>'
+  - 'Norbert Buchmuller <norbi@nix.hu>'
+  - 'Shawn M Moore <code@sartak.org>'
+  - 'Stevan Little <stevan.little@iinteractive.com>'
+  - 'Tomas Doran (t0m) <bobtfish@bobtfish.net>'
+  - 'Zakariyya Mughal <zaki.mughal@gmail.com>'
+  - 'acmoore <acmoore@bd8105ee-0ff8-0310-8827-fb3f25b6796d>'
+  - 'epitaph <epitaph@bd8105ee-0ff8-0310-8827-fb3f25b6796d>'
+  - 'naquad <naquad@bd8105ee-0ff8-0310-8827-fb3f25b6796d>'
+  - 'oliver <oliver@bd8105ee-0ff8-0310-8827-fb3f25b6796d>'
+  - 'sukria <sukria@bd8105ee-0ff8-0310-8827-fb3f25b6796d>'
+  - "יובל קוג'מן (Yuval Kogman) <nothingmuch@woobling.org>"

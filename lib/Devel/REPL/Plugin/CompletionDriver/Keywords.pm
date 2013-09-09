@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::CompletionDriver::Keywords;
+BEGIN {
+  $Devel::REPL::Plugin::CompletionDriver::Keywords::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::CompletionDriver::Keywords::VERSION = '1.003021';
+}
 use Devel::REPL::Plugin;
 use B::Keywords qw/@Functions @Barewords/;
 use namespace::autoclean;

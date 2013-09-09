@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::CompletionDriver::LexEnv;
+BEGIN {
+  $Devel::REPL::Plugin::CompletionDriver::LexEnv::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::CompletionDriver::LexEnv::VERSION = '1.003021';
+}
 use Devel::REPL::Plugin;
 use namespace::autoclean;
 

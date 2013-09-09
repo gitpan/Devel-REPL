@@ -1,4 +1,10 @@
 package Devel::REPL::Plugin;
+BEGIN {
+  $Devel::REPL::Plugin::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::VERSION = '1.003021';
+}
 
 use strict;
 use warnings;

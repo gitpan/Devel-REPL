@@ -1,9 +1,17 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::Packages;
+BEGIN {
+  $Devel::REPL::Plugin::Packages::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::Packages::VERSION = '1.003021';
+}
 use Devel::REPL::Plugin;
 
 use namespace::autoclean;
 
-use vars qw($PKG_SAVE);
+our $PKG_SAVE;
 
 has 'current_package' => (
   isa      => 'Str',
@@ -46,6 +54,12 @@ around 'eval' => sub {
 };
 
 package Devel::REPL::Plugin::Packages::DefaultScratchpad;
+BEGIN {
+  $Devel::REPL::Plugin::Packages::DefaultScratchpad::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::Packages::DefaultScratchpad::VERSION = '1.003021';
+}
 
 # declare empty scratchpad package for cleanliness
 

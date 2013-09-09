@@ -1,10 +1,18 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::Commands;
+BEGIN {
+  $Devel::REPL::Plugin::Commands::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::Commands::VERSION = '1.003021';
+}
 
 use Devel::REPL::Plugin;
 use Scalar::Util qw(weaken);
 
 use namespace::autoclean;
-use vars qw($COMMAND_INSTALLER);
+our $COMMAND_INSTALLER;
 
 has 'command_set' => (
   is => 'ro',

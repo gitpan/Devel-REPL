@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Meta::Plugin;
+BEGIN {
+  $Devel::REPL::Meta::Plugin::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Meta::Plugin::VERSION = '1.003021';
+}
 
 use Moose;
 

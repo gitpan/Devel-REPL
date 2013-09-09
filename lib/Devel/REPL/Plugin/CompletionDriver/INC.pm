@@ -1,4 +1,12 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin::CompletionDriver::INC;
+BEGIN {
+  $Devel::REPL::Plugin::CompletionDriver::INC::AUTHORITY = 'cpan:PHAYLON';
+}
+{
+  $Devel::REPL::Plugin::CompletionDriver::INC::VERSION = '1.003021';
+}
 use Devel::REPL::Plugin;
 use File::Next;
 use File::Spec;
@@ -99,7 +107,7 @@ around complete => sub {
     }
   };
 
-  # look through all of 
+  # look through all of
   INC: for (@INC)
   {
     my $path = $_;
