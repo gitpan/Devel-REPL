@@ -5,9 +5,10 @@ BEGIN {
   $Devel::REPL::Plugin::CompletionDriver::INC::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::CompletionDriver::INC::VERSION = '1.003021';
+  $Devel::REPL::Plugin::CompletionDriver::INC::VERSION = '1.003022';
 }
 use Devel::REPL::Plugin;
+use Devel::REPL::Plugin::Completion;    # die early if cannot load
 use File::Next;
 use File::Spec;
 use namespace::autoclean;
@@ -71,7 +72,7 @@ around complete => sub {
   my @found;
 
   # most VCSes don't litter every single fucking directory with garbage. if you
-  # know of any other, just stick them in here. noone wants to complete
+  # know of any other, just stick them in here. No one wants to complete
   # Devel::REPL::Plugin::.svn
   my %ignored =
   (

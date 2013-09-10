@@ -3,7 +3,7 @@ BEGIN {
   $Devel::REPL::Error::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Error::VERSION = '1.003021';
+  $Devel::REPL::Error::VERSION = '1.003022';
 }
 use Moose;
 

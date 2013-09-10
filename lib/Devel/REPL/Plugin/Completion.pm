@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::Completion::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::Completion::VERSION = '1.003021';
+  $Devel::REPL::Plugin::Completion::VERSION = '1.003022';
 }
 
 use Devel::REPL::Plugin;

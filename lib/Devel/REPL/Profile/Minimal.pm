@@ -3,7 +3,7 @@ BEGIN {
   $Devel::REPL::Profile::Minimal::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Profile::Minimal::VERSION = '1.003021';
+  $Devel::REPL::Profile::Minimal::VERSION = '1.003022';
 }
 
 use Moose;

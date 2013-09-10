@@ -1,8 +1,16 @@
 Revision history for Devel-REPL
 
+1.003022  2013-09-10 01:53:10Z (Karen Etheridge)
+  - workaround added for plugins consuming plugins that use optional features
+  - install problems fixed when some optional prereqs are not installed, by
+    properly detecting the lack of features during testing (RT#88542)
+  - spelling fixes (RT#87691, David Steinbrunner)
+
 1.003021  2013-09-09 02:10:45Z (Karen Etheridge)
   - removed use of deprecated functions from Class::MOP
   - long-deprecated Devel::REPL::Plugin::NewlineHack removed at last
+  - converted dist to Dist::Zilla, with a different mechanism for specifying
+    optional features (install with cpanm --interactive to be prompted)
 
 1.003020   2013-07-08
   - shebang fixed in re.pl so it is rewritten to point to the proper perl at

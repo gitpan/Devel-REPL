@@ -3,9 +3,9 @@ BEGIN {
   $Devel::REPL::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::VERSION = '1.003021';
+  $Devel::REPL::VERSION = '1.003022';
 }
-# git description: v1.003020-13-g7403333
+# git description: v1.003021-11-g0e0d253
 
 
 use Term::ReadLine;
@@ -253,7 +253,7 @@ filename like so:
 
  system$ re.pl --rcfile myproject.pc
 
-If the filename happens to contain a forwardslash, then it's used absolutely,
+If the filename happens to contain a forward slash, then it's used absolutely,
 or realive to the current working directory:
 
  system$ re.pl --rcfile /path/to/my/project/repl.rc
@@ -327,7 +327,7 @@ L<Devel::REPL::Plugin::ReadlineHistory>
 
 =head2 Plugins
 
-Plugins are a way to add funcionality to the REPL shell, and take advantage of
+Plugins are a way to add functionality to the REPL shell, and take advantage of
 C<Devel::REPL> being based on the L<Moose> object system for Perl 5. This
 means it's simple to 'hook into' many steps of the R-E-P-L process. Plugins
 can change the way commands are interpreted, or the way their results are

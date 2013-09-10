@@ -5,9 +5,10 @@ BEGIN {
   $Devel::REPL::Plugin::CompletionDriver::Keywords::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::CompletionDriver::Keywords::VERSION = '1.003021';
+  $Devel::REPL::Plugin::CompletionDriver::Keywords::VERSION = '1.003022';
 }
 use Devel::REPL::Plugin;
+use Devel::REPL::Plugin::Completion;    # die early if cannot load
 use B::Keywords qw/@Functions @Barewords/;
 use namespace::autoclean;
 

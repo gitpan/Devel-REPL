@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::OutputCache::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::OutputCache::VERSION = '1.003021';
+  $Devel::REPL::Plugin::OutputCache::VERSION = '1.003022';
 }
 
 use Devel::REPL::Plugin;
