@@ -1,5 +1,9 @@
 Revision history for Devel-REPL
 
+1.003023  2013-09-12 00:52:03Z (Karen Etheridge)
+  - The default profile is now "Minimal", not "Default", as Default requires
+    some optional features; Default renamed to Standard (RT#88615)
+
 1.003022  2013-09-10 01:53:10Z (Karen Etheridge)
   - workaround added for plugins consuming plugins that use optional features
   - install problems fixed when some optional prereqs are not installed, by

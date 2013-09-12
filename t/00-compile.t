@@ -1,9 +1,9 @@
 use strict;
 use warnings;
 
-# this test was generated with Dist::Zilla::Plugin::Test::Compile 2.029
+# this test was generated with Dist::Zilla::Plugin::Test::Compile 2.030
 
-use Test::More 0.94 tests => 24 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
+use Test::More 0.94 tests => 25 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
 
 
 
@@ -29,6 +29,7 @@ my @module_files = (
     'Devel/REPL/Profile.pm',
     'Devel/REPL/Profile/Default.pm',
     'Devel/REPL/Profile/Minimal.pm',
+    'Devel/REPL/Profile/Standard.pm',
     'Devel/REPL/Script.pm'
 );
 

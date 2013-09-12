@@ -3,33 +3,14 @@ BEGIN {
   $Devel::REPL::Profile::Default::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Profile::Default::VERSION = '1.003022';
+  $Devel::REPL::Profile::Default::VERSION = '1.003023';
 }
 
 use Moose;
 use namespace::autoclean;
 
-with 'Devel::REPL::Profile';
+# for backcompat only - Default was renamed to Standard
 
-sub plugins { qw(
-  Colors
-  Completion
-  CompletionDriver::INC
-  CompletionDriver::LexEnv
-  CompletionDriver::Keywords
-  CompletionDriver::Methods
-  History
-  LexEnv
-  DDS
-  Packages
-  Commands
-  MultiLine::PPI
-  ReadLineHistory
-);}
-
-sub apply_profile {
-  my ($self, $repl) = @_;
-  $repl->load_plugin($_) for $self->plugins;
-}
+extends 'Devel::REPL::Profile::Standard';
 
 1;

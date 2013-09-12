@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::CompletionDriver::Methods::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::CompletionDriver::Methods::VERSION = '1.003022';
+  $Devel::REPL::Plugin::CompletionDriver::Methods::VERSION = '1.003023';
 }
 use Devel::REPL::Plugin;
 use Devel::REPL::Plugin::Completion;    # die early if cannot load

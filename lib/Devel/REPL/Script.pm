@@ -3,7 +3,7 @@ BEGIN {
   $Devel::REPL::Script::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Script::VERSION = '1.003022';
+  $Devel::REPL::Script::VERSION = '1.003023';
 }
 
 use Moose;
@@ -25,7 +25,7 @@ has 'rcfile' => (
 has 'profile' => (
   is       => 'ro',
   isa      => 'Str',
-  default  => sub { $ENV{DEVEL_REPL_PROFILE} || 'Default' },
+  default  => sub { $ENV{DEVEL_REPL_PROFILE} || 'Minimal' },
 );
 
 has '_repl' => (

@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::Nopaste::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::Nopaste::VERSION = '1.003022';
+  $Devel::REPL::Plugin::Nopaste::VERSION = '1.003023';
 }
 
 use Devel::REPL::Plugin;

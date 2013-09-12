@@ -10,7 +10,7 @@ BEGIN {
   $Devel::REPL::Plugin::ReadLineHistory::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::ReadLineHistory::VERSION = '1.003022';
+  $Devel::REPL::Plugin::ReadLineHistory::VERSION = '1.003023';
 }
 
 use Devel::REPL::Plugin;

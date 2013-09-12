@@ -157,7 +157,7 @@
             "Data::Dumper::Concise" : "0",
             "Dist::Zilla" : "4.300038",
             "Dist::Zilla::Plugin::ModuleBuildTiny" : "0.004",
-            "Dist::Zilla::PluginBundle::Author::ETHER" : "0.022",
+            "Dist::Zilla::PluginBundle::Author::ETHER" : "0.023",
             "File::Next" : "0",
             "Lexical::Persistence" : "0",
             "Module::Refresh" : "0",
@@ -213,155 +213,159 @@
    "provides" : {
       "Devel::REPL" : {
          "file" : "lib/Devel/REPL.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Error" : {
          "file" : "lib/Devel/REPL/Error.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Meta::Plugin" : {
          "file" : "lib/Devel/REPL/Meta/Plugin.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin" : {
          "file" : "lib/Devel/REPL/Plugin.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::B::Concise" : {
          "file" : "lib/Devel/REPL/Plugin/B/Concise.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::Colors" : {
          "file" : "lib/Devel/REPL/Plugin/Colors.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::Commands" : {
          "file" : "lib/Devel/REPL/Plugin/Commands.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::Completion" : {
          "file" : "lib/Devel/REPL/Plugin/Completion.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::CompletionDriver::Globals" : {
          "file" : "lib/Devel/REPL/Plugin/CompletionDriver/Globals.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::CompletionDriver::INC" : {
          "file" : "lib/Devel/REPL/Plugin/CompletionDriver/INC.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::CompletionDriver::Keywords" : {
          "file" : "lib/Devel/REPL/Plugin/CompletionDriver/Keywords.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::CompletionDriver::LexEnv" : {
          "file" : "lib/Devel/REPL/Plugin/CompletionDriver/LexEnv.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::CompletionDriver::Methods" : {
          "file" : "lib/Devel/REPL/Plugin/CompletionDriver/Methods.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::CompletionDriver::Turtles" : {
          "file" : "lib/Devel/REPL/Plugin/CompletionDriver/Turtles.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::DDC" : {
          "file" : "lib/Devel/REPL/Plugin/DDC.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::DDS" : {
          "file" : "lib/Devel/REPL/Plugin/DDS.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::DumpHistory" : {
          "file" : "lib/Devel/REPL/Plugin/DumpHistory.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::FancyPrompt" : {
          "file" : "lib/Devel/REPL/Plugin/FancyPrompt.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::FindVariable" : {
          "file" : "lib/Devel/REPL/Plugin/FindVariable.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::History" : {
          "file" : "lib/Devel/REPL/Plugin/History.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::Interrupt" : {
          "file" : "lib/Devel/REPL/Plugin/Interrupt.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::LexEnv" : {
          "file" : "lib/Devel/REPL/Plugin/LexEnv.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::MultiLine::PPI" : {
          "file" : "lib/Devel/REPL/Plugin/MultiLine/PPI.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::Nopaste" : {
          "file" : "lib/Devel/REPL/Plugin/Nopaste.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::OutputCache" : {
          "file" : "lib/Devel/REPL/Plugin/OutputCache.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::PPI" : {
          "file" : "lib/Devel/REPL/Plugin/PPI.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::Packages" : {
          "file" : "lib/Devel/REPL/Plugin/Packages.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::Packages::DefaultScratchpad" : {
          "file" : "lib/Devel/REPL/Plugin/Packages.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::Peek" : {
          "file" : "lib/Devel/REPL/Plugin/Peek.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::ReadLineHistory" : {
          "file" : "lib/Devel/REPL/Plugin/ReadLineHistory.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::Refresh" : {
          "file" : "lib/Devel/REPL/Plugin/Refresh.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::ShowClass" : {
          "file" : "lib/Devel/REPL/Plugin/ShowClass.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::Timing" : {
          "file" : "lib/Devel/REPL/Plugin/Timing.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Plugin::Turtles" : {
          "file" : "lib/Devel/REPL/Plugin/Turtles.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Profile" : {
          "file" : "lib/Devel/REPL/Profile.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Profile::Default" : {
          "file" : "lib/Devel/REPL/Profile/Default.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       },
       "Devel::REPL::Profile::Minimal" : {
          "file" : "lib/Devel/REPL/Profile/Minimal.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
+      },
+      "Devel::REPL::Profile::Standard" : {
+         "file" : "lib/Devel/REPL/Profile/Standard.pm",
+         "version" : "1.003023"
       },
       "Devel::REPL::Script" : {
          "file" : "lib/Devel/REPL/Script.pm",
-         "version" : "1.003022"
+         "version" : "1.003023"
       }
    },
    "release_status" : "stable",
@@ -376,7 +380,7 @@
          "web" : "http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=p5sagit/Devel-REPL.git;a=summary"
       }
    },
-   "version" : "1.003022",
+   "version" : "1.003023",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.019003"
@@ -390,12 +394,12 @@
          {
             "class" : "Dist::Zilla::Plugin::PromptIfStale",
             "name" : "@Author::ETHER/build",
-            "version" : "0.003"
+            "version" : "0.004"
          },
          {
             "class" : "Dist::Zilla::Plugin::PromptIfStale",
             "name" : "@Author::ETHER/release",
-            "version" : "0.003"
+            "version" : "0.004"
          },
          {
             "class" : "Dist::Zilla::Plugin::ExecDir",
@@ -456,7 +460,7 @@
                }
             },
             "name" : "@Author::ETHER/Test::Compile",
-            "version" : "2.029"
+            "version" : "2.030"
          },
          {
             "class" : "Dist::Zilla::Plugin::Test::CheckDeps",
@@ -731,57 +735,57 @@
          {
             "class" : "Dist::Zilla::Plugin::OptionalFeature",
             "name" : "Completion",
-            "version" : "0.006"
+            "version" : "0.007"
          },
          {
             "class" : "Dist::Zilla::Plugin::OptionalFeature",
             "name" : "DDS",
-            "version" : "0.006"
+            "version" : "0.007"
          },
          {
             "class" : "Dist::Zilla::Plugin::OptionalFeature",
             "name" : "DDC",
-            "version" : "0.006"
+            "version" : "0.007"
          },
          {
             "class" : "Dist::Zilla::Plugin::OptionalFeature",
             "name" : "INC_completion",
-            "version" : "0.006"
+            "version" : "0.007"
          },
          {
             "class" : "Dist::Zilla::Plugin::OptionalFeature",
             "name" : "Interrupt",
-            "version" : "0.006"
+            "version" : "0.007"
          },
          {
             "class" : "Dist::Zilla::Plugin::OptionalFeature",
             "name" : "Keywords_completion",
-            "version" : "0.006"
+            "version" : "0.007"
          },
          {
             "class" : "Dist::Zilla::Plugin::OptionalFeature",
             "name" : "LexEnv",
-            "version" : "0.006"
+            "version" : "0.007"
          },
          {
             "class" : "Dist::Zilla::Plugin::OptionalFeature",
             "name" : "MultiLine",
-            "version" : "0.006"
+            "version" : "0.007"
          },
          {
             "class" : "Dist::Zilla::Plugin::OptionalFeature",
             "name" : "Nopaste",
-            "version" : "0.006"
+            "version" : "0.007"
          },
          {
             "class" : "Dist::Zilla::Plugin::OptionalFeature",
             "name" : "PPI",
-            "version" : "0.006"
+            "version" : "0.007"
          },
          {
             "class" : "Dist::Zilla::Plugin::OptionalFeature",
             "name" : "Refresh",
-            "version" : "0.006"
+            "version" : "0.007"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",

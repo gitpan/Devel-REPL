@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::FancyPrompt::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::FancyPrompt::VERSION = '1.003022';
+  $Devel::REPL::Plugin::FancyPrompt::VERSION = '1.003023';
 }
 
 use Devel::REPL::Plugin;

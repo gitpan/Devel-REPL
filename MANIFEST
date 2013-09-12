@@ -45,6 +45,7 @@ lib/Devel/REPL/Plugin/Turtles.pm
 lib/Devel/REPL/Profile.pm
 lib/Devel/REPL/Profile/Default.pm
 lib/Devel/REPL/Profile/Minimal.pm
+lib/Devel/REPL/Profile/Standard.pm
 lib/Devel/REPL/Script.pm
 script/re.pl
 t/00-check-deps.t
