@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::CompletionDriver::Turtles::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::CompletionDriver::Turtles::VERSION = '1.003023';
+  $Devel::REPL::Plugin::CompletionDriver::Turtles::VERSION = '1.003024';
 }
 use Devel::REPL::Plugin;
 use Devel::REPL::Plugin::Completion;    # die early if cannot load

@@ -5,6 +5,7 @@ LICENSE
 MANIFEST
 META.json
 META.yml
+Makefile.PL
 README
 dist.ini
 examples/dbic_project_profile.pl
@@ -50,6 +51,7 @@ lib/Devel/REPL/Script.pm
 script/re.pl
 t/00-check-deps.t
 t/00-compile.t
+t/00-report-prereqs.t
 t/load_core.t
 t/load_plugins.t
 xt/release/changes_has_content.t

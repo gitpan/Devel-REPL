@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::LexEnv::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::LexEnv::VERSION = '1.003023';
+  $Devel::REPL::Plugin::LexEnv::VERSION = '1.003024';
 }
 
 use Devel::REPL::Plugin;

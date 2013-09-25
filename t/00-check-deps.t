@@ -1,5 +1,10 @@
+use strict;
+use warnings;
+
+# this test was generated with Dist::Zilla::Plugin::Test::CheckDeps 0.008
+
 use Test::More 0.94;
-use Test::CheckDeps 0.004;
+use Test::CheckDeps 0.007;
 
 check_dependencies('suggests');
 

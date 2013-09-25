@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::FindVariable::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::FindVariable::VERSION = '1.003023';
+  $Devel::REPL::Plugin::FindVariable::VERSION = '1.003024';
 }
 
 use Devel::REPL::Plugin;

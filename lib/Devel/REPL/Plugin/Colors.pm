@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::Colors::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::Colors::VERSION = '1.003023';
+  $Devel::REPL::Plugin::Colors::VERSION = '1.003024';
 }
 
 use Devel::REPL::Plugin;

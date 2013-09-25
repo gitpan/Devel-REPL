@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Meta::Plugin::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Meta::Plugin::VERSION = '1.003023';
+  $Devel::REPL::Meta::Plugin::VERSION = '1.003024';
 }
 
 use Moose;

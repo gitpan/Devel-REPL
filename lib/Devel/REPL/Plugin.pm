@@ -3,7 +3,7 @@ BEGIN {
   $Devel::REPL::Plugin::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::VERSION = '1.003023';
+  $Devel::REPL::Plugin::VERSION = '1.003024';
 }
 
 use strict;

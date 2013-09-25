@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::Turtles::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::Turtles::VERSION = '1.003023';
+  $Devel::REPL::Plugin::Turtles::VERSION = '1.003024';
 }
 use Devel::REPL::Plugin;
 

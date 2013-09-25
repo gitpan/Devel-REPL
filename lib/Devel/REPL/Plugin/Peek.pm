@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::Peek::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::Peek::VERSION = '1.003023';
+  $Devel::REPL::Plugin::Peek::VERSION = '1.003024';
 }
 use Devel::REPL::Plugin;
 

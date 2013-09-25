@@ -3,7 +3,7 @@ BEGIN {
   $Devel::REPL::Script::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Script::VERSION = '1.003023';
+  $Devel::REPL::Script::VERSION = '1.003024';
 }
 
 use Moose;
