@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::Packages::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::Packages::VERSION = '1.003024';
+  $Devel::REPL::Plugin::Packages::VERSION = '1.003025';
 }
 use Devel::REPL::Plugin;
 
@@ -58,7 +58,7 @@ BEGIN {
   $Devel::REPL::Plugin::Packages::DefaultScratchpad::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::Packages::DefaultScratchpad::VERSION = '1.003024';
+  $Devel::REPL::Plugin::Packages::DefaultScratchpad::VERSION = '1.003025';
 }
 
 # declare empty scratchpad package for cleanliness

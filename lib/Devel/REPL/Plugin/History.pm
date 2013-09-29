@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::History::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::History::VERSION = '1.003024';
+  $Devel::REPL::Plugin::History::VERSION = '1.003025';
 }
 
 use Devel::REPL::Plugin;

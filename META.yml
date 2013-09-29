@@ -3,12 +3,15 @@ abstract: 'a modern perl interactive shell'
 author:
   - 'Matt S Trout - mst (at) shadowcatsystems.co.uk (L<http://www.shadowcatsystems.co.uk/>)'
 build_requires:
+  ExtUtils::MakeMaker: 0
   File::Spec: 0
+  File::Spec::Functions: 0
   IO::Handle: 0
   IPC::Open3: 0
-  Test::CheckDeps: 0.006
+  List::Util: 0
+  Test::CheckDeps: 0.007
+  Test::Fatal: 0
   Test::More: 0.94
-  Test::Warnings: 0
   if: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
@@ -73,121 +76,121 @@ optional_features:
 provides:
   Devel::REPL:
     file: lib/Devel/REPL.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Error:
     file: lib/Devel/REPL/Error.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Meta::Plugin:
     file: lib/Devel/REPL/Meta/Plugin.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin:
     file: lib/Devel/REPL/Plugin.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::B::Concise:
     file: lib/Devel/REPL/Plugin/B/Concise.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::Colors:
     file: lib/Devel/REPL/Plugin/Colors.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::Commands:
     file: lib/Devel/REPL/Plugin/Commands.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::Completion:
     file: lib/Devel/REPL/Plugin/Completion.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::CompletionDriver::Globals:
     file: lib/Devel/REPL/Plugin/CompletionDriver/Globals.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::CompletionDriver::INC:
     file: lib/Devel/REPL/Plugin/CompletionDriver/INC.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::CompletionDriver::Keywords:
     file: lib/Devel/REPL/Plugin/CompletionDriver/Keywords.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::CompletionDriver::LexEnv:
     file: lib/Devel/REPL/Plugin/CompletionDriver/LexEnv.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::CompletionDriver::Methods:
     file: lib/Devel/REPL/Plugin/CompletionDriver/Methods.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::CompletionDriver::Turtles:
     file: lib/Devel/REPL/Plugin/CompletionDriver/Turtles.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::DDC:
     file: lib/Devel/REPL/Plugin/DDC.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::DDS:
     file: lib/Devel/REPL/Plugin/DDS.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::DumpHistory:
     file: lib/Devel/REPL/Plugin/DumpHistory.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::FancyPrompt:
     file: lib/Devel/REPL/Plugin/FancyPrompt.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::FindVariable:
     file: lib/Devel/REPL/Plugin/FindVariable.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::History:
     file: lib/Devel/REPL/Plugin/History.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::Interrupt:
     file: lib/Devel/REPL/Plugin/Interrupt.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::LexEnv:
     file: lib/Devel/REPL/Plugin/LexEnv.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::MultiLine::PPI:
     file: lib/Devel/REPL/Plugin/MultiLine/PPI.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::Nopaste:
     file: lib/Devel/REPL/Plugin/Nopaste.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::OutputCache:
     file: lib/Devel/REPL/Plugin/OutputCache.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::PPI:
     file: lib/Devel/REPL/Plugin/PPI.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::Packages:
     file: lib/Devel/REPL/Plugin/Packages.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::Packages::DefaultScratchpad:
     file: lib/Devel/REPL/Plugin/Packages.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::Peek:
     file: lib/Devel/REPL/Plugin/Peek.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::ReadLineHistory:
     file: lib/Devel/REPL/Plugin/ReadLineHistory.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::Refresh:
     file: lib/Devel/REPL/Plugin/Refresh.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::ShowClass:
     file: lib/Devel/REPL/Plugin/ShowClass.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::Timing:
     file: lib/Devel/REPL/Plugin/Timing.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Plugin::Turtles:
     file: lib/Devel/REPL/Plugin/Turtles.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Profile:
     file: lib/Devel/REPL/Profile.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Profile::Default:
     file: lib/Devel/REPL/Profile/Default.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Profile::Minimal:
     file: lib/Devel/REPL/Profile/Minimal.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Profile::Standard:
     file: lib/Devel/REPL/Profile/Standard.pm
-    version: 1.003024
+    version: 1.003025
   Devel::REPL::Script:
     file: lib/Devel/REPL/Script.pm
-    version: 1.003024
+    version: 1.003025
 recommends:
   App::Nopaste: 0
   B::Keywords: 0
@@ -206,21 +209,31 @@ requires:
   File::Spec: 0
   Module::Runtime: 0
   Moose: 0.93
+  Moose::Meta::Role: 0
+  Moose::Role: 0
   MooseX::Getopt: 0.18
   MooseX::Object::Pluggable: 0.0009
+  Scalar::Util: 0
   Task::Weaken: 0
   Term::ANSIColor: 0
   Term::ReadLine: 0
+  Time::HiRes: 0
   namespace::autoclean: 0
   perl: 5.008001
+  strict: 0
+  warnings: 0
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Devel-REPL
   repository: git://git.shadowcat.co.uk/p5sagit/Devel-REPL.git
-version: 1.003024
+version: 1.003025
 x_Dist_Zilla:
   perl:
     version: 5.019004
   plugins:
+    -
+      class: Dist::Zilla::Plugin::FileFinder::Filter
+      name: CoreModules
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::Git::NextVersion
       name: '@Author::ETHER/Git::NextVersion'
@@ -274,7 +287,7 @@ x_Dist_Zilla:
       config:
         Dist::Zilla::Plugin::Test::Compile:
           module_finder:
-            - ':InstallModules'
+            - CoreModules
           script_finder:
             - ':ExecFiles'
             - '@Author::ETHER/Examples'
@@ -283,7 +296,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Test::CheckDeps
       name: '@Author::ETHER/Test::CheckDeps'
-      version: 0.008
+      version: 0.009
     -
       class: Dist::Zilla::Plugin::Test::NoTabs
       config:
@@ -294,7 +307,7 @@ x_Dist_Zilla:
             - ':ExecFiles'
             - '@Author::ETHER/Examples'
       name: '@Author::ETHER/Test::NoTabs'
-      version: 0.02
+      version: 0.04
     -
       class: Dist::Zilla::Plugin::EOLTests
       name: '@Author::ETHER/EOLTests'
@@ -390,6 +403,10 @@ x_Dist_Zilla:
       name: '@Author::ETHER/MetaConfig'
       version: 4.300039
     -
+      class: Dist::Zilla::Plugin::AutoPrereqs
+      name: '@Author::ETHER/AutoPrereqs'
+      version: 4.300039
+    -
       class: Dist::Zilla::Plugin::MinimumPerl
       name: '@Author::ETHER/MinimumPerl'
       version: 1.003
@@ -416,7 +433,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::InstallGuide
       name: '@Author::ETHER/InstallGuide'
-      version: 1.200000
+      version: 1.200001
     -
       class: Dist::Zilla::Plugin::CopyFilesFromBuild
       name: '@Author::ETHER/CopyFilesFromBuild'
@@ -492,14 +509,6 @@ x_Dist_Zilla:
           phase: runtime
           type: requires
       name: RuntimeRequires
-      version: 4.300039
-    -
-      class: Dist::Zilla::Plugin::Prereqs
-      config:
-        Dist::Zilla::Plugin::Prereqs:
-          phase: test
-          type: requires
-      name: TestRequires
       version: 4.300039
     -
       class: Dist::Zilla::Plugin::Prereqs

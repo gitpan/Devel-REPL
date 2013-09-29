@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::Interrupt::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::Interrupt::VERSION = '1.003024';
+  $Devel::REPL::Plugin::Interrupt::VERSION = '1.003025';
 }
 
 use Devel::REPL::Plugin;

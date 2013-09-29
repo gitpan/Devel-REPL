@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::PPI::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::PPI::VERSION = '1.003024';
+  $Devel::REPL::Plugin::PPI::VERSION = '1.003025';
 }
 use Devel::REPL::Plugin;
 

@@ -20,27 +20,35 @@ my @modules = qw(
   File::HomeDir
   File::Next
   File::Spec
+  File::Spec::Functions
   IO::Handle
   IPC::Open3
   Lexical::Persistence
+  List::Util
   Module::Build::Tiny
   Module::Refresh
   Module::Runtime
   Moose
+  Moose::Meta::Role
+  Moose::Role
   MooseX::Getopt
   MooseX::Object::Pluggable
   PPI
   PPI::XS
+  Scalar::Util
   Sys::SigAction
   Task::Weaken
   Term::ANSIColor
   Term::ReadLine
   Test::CheckDeps
+  Test::Fatal
   Test::More
-  Test::Warnings
+  Time::HiRes
   if
   namespace::autoclean
   perl
+  strict
+  warnings
 );
 
 # replace modules with dynamic results from MYMETA.json if we can

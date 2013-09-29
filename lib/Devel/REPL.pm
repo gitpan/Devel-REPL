@@ -3,9 +3,9 @@ BEGIN {
   $Devel::REPL::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::VERSION = '1.003024';
+  $Devel::REPL::VERSION = '1.003025';
 }
-# git description: v1.003023-4-g7a9167f
+# git description: v1.003024-3-g9d73eaa
 
 
 use Term::ReadLine;

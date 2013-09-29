@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::Timing::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::Timing::VERSION = '1.003024';
+  $Devel::REPL::Plugin::Timing::VERSION = '1.003025';
 }
 
 use Devel::REPL::Plugin;

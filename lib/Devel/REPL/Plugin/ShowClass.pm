@@ -5,7 +5,7 @@ BEGIN {
   $Devel::REPL::Plugin::ShowClass::AUTHORITY = 'cpan:PHAYLON';
 }
 {
-  $Devel::REPL::Plugin::ShowClass::VERSION = '1.003024';
+  $Devel::REPL::Plugin::ShowClass::VERSION = '1.003025';
 }
 use Devel::REPL::Plugin;
 use namespace::autoclean;
