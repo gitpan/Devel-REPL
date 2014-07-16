@@ -4,16 +4,12 @@ package Devel::REPL::Plugin::B::Concise;
 BEGIN {
   $Devel::REPL::Plugin::B::Concise::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::B::Concise::VERSION = '1.003025';
-}
+$Devel::REPL::Plugin::B::Concise::VERSION = '1.003026';
 use Devel::REPL::Plugin;
-
-use B::Concise ();
-
-B::Concise::compileOpts(qw(-nobanner));
-
+use B::Concise 0.62 ();
 use namespace::autoclean;
+
+B::Concise::compileOpts qw(-nobanner);
 
 sub BEFORE_PLUGIN {
     my $self = shift;
@@ -64,6 +60,10 @@ __END__
 
 Devel::REPL::Plugin::B::Concise - B::Concise dumping of expression optrees
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 SYNOPSIS
 
   repl> #concise -exec -terse {
@@ -95,5 +95,3 @@ determine the formatting, etc.
 Yuval Kogman E<lt>nothingmuch@woobling.orgE<gt>
 
 =cut
-
-

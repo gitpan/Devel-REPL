@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::LexEnv;
 BEGIN {
   $Devel::REPL::Plugin::LexEnv::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::LexEnv::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::LexEnv::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use namespace::autoclean;
 use Lexical::Persistence;
@@ -75,6 +72,10 @@ __END__
 
 Devel::REPL::Plugin::LexEnv - Provide a lexical environment for the REPL
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 SYNOPSIS
 
  # in your re.pl file:
@@ -95,4 +96,3 @@ Devel::REPL::Plugin::LexEnv - Provide a lexical environment for the REPL
  $ warn $s->resultset('User')->first->first_name # <-- note that $s works
 
 =cut
-

@@ -4,9 +4,7 @@ package Devel::REPL::Plugin::CompletionDriver::Turtles;
 BEGIN {
   $Devel::REPL::Plugin::CompletionDriver::Turtles::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::CompletionDriver::Turtles::VERSION = '1.003025';
-}
+$Devel::REPL::Plugin::CompletionDriver::Turtles::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use Devel::REPL::Plugin::Completion;    # die early if cannot load
 use namespace::autoclean;
@@ -50,9 +48,12 @@ __END__
 
 Devel::REPL::Plugin::CompletionDriver::Turtles - Complete Turtles-based commands
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 AUTHOR
 
 Yuval Kogman E<lt>nothingmuch@woobling.orgE<gt>
 
 =cut
-

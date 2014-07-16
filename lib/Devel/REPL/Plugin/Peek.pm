@@ -4,13 +4,9 @@ package Devel::REPL::Plugin::Peek;
 BEGIN {
   $Devel::REPL::Plugin::Peek::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::Peek::VERSION = '1.003025';
-}
+$Devel::REPL::Plugin::Peek::VERSION = '1.003026';
 use Devel::REPL::Plugin;
-
 use Devel::Peek qw(Dump);
-
 use namespace::autoclean;
 
 sub BEFORE_PLUGIN {
@@ -42,6 +38,10 @@ __END__
 =head1 NAME
 
 Devel::REPL::Plugin::Peek - L<Devel::Peek> plugin for L<Devel::REPL>.
+
+=head1 VERSION
+
+version 1.003026
 
 =head1 SYNOPSIS
 

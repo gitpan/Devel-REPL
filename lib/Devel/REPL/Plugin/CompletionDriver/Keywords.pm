@@ -4,9 +4,7 @@ package Devel::REPL::Plugin::CompletionDriver::Keywords;
 BEGIN {
   $Devel::REPL::Plugin::CompletionDriver::Keywords::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::CompletionDriver::Keywords::VERSION = '1.003025';
-}
+$Devel::REPL::Plugin::CompletionDriver::Keywords::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use Devel::REPL::Plugin::Completion;    # die early if cannot load
 use B::Keywords qw/@Functions @Barewords/;
@@ -46,9 +44,12 @@ __END__
 
 Devel::REPL::Plugin::CompletionDriver::Keywords - Complete Perl keywords and operators
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 AUTHOR
 
 Shawn M Moore, C<< <sartak at gmail dot com> >>
 
 =cut
-

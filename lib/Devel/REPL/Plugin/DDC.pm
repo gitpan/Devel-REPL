@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::DDC;
 BEGIN {
   $Devel::REPL::Plugin::DDC::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::DDC::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::DDC::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use Data::Dumper::Concise ();
 
@@ -36,6 +33,10 @@ __END__
 
 Devel::REPL::Plugin::DDC - Format results with Data::Dumper::Concise
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 SYNOPSIS
 
  # in your re.pl file:
@@ -55,4 +56,3 @@ Devel::REPL::Plugin::DDC - Format results with Data::Dumper::Concise
  $
 
 =cut
-

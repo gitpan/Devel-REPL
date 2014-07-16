@@ -4,13 +4,9 @@ package Devel::REPL::Plugin::Turtles;
 BEGIN {
   $Devel::REPL::Plugin::Turtles::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::Turtles::VERSION = '1.003025';
-}
+$Devel::REPL::Plugin::Turtles::VERSION = '1.003026';
 use Devel::REPL::Plugin;
-
 use Scalar::Util qw(reftype);
-
 use namespace::autoclean;
 
 has default_command_prefix => (
@@ -81,6 +77,10 @@ __END__
 
 Devel::REPL::Plugin::Turtles - Generic command creation using a read hook
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 DESCRIPTION
 
 By default, this plugin allows calling commands using a read hook
@@ -96,4 +96,3 @@ if other uses for that character are needed (e.g., '#' for the
 shell escape character in the PDL shell.
 
 =cut
-

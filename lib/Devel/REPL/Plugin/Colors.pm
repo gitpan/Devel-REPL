@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::Colors;
 BEGIN {
   $Devel::REPL::Plugin::Colors::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::Colors::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::Colors::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use Term::ANSIColor;
 use namespace::autoclean;
@@ -72,6 +69,10 @@ __END__
 =head1 NAME
 
 Devel::REPL::Plugin::Colors - add color to return values, warnings, and errors
+
+=head1 VERSION
+
+version 1.003026
 
 =head1 SYNOPSIS
 

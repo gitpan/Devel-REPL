@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::Interrupt;
 BEGIN {
   $Devel::REPL::Plugin::Interrupt::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::Interrupt::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::Interrupt::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use Sys::SigAction qw(set_sig_handler);
 use namespace::autoclean;
@@ -56,6 +53,10 @@ __END__
 =head1 NAME
 
 Devel::REPL::Plugin::Interrupt - traps SIGINT to kill long-running lines
+
+=head1 VERSION
+
+version 1.003026
 
 =head1 DESCRIPTION
 

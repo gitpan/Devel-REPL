@@ -2,10 +2,7 @@ package Devel::REPL::Profile::Default;
 BEGIN {
   $Devel::REPL::Profile::Default::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Profile::Default::VERSION = '1.003025';
-}
-
+$Devel::REPL::Profile::Default::VERSION = '1.003026';
 use Moose;
 use namespace::autoclean;
 

@@ -1,13 +1,10 @@
+use strict;
+use warnings;
 package Devel::REPL::Plugin;
 BEGIN {
   $Devel::REPL::Plugin::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::VERSION = '1.003025';
-}
-
-use strict;
-use warnings;
+$Devel::REPL::Plugin::VERSION = '1.003026';
 use Devel::REPL::Meta::Plugin;
 use Moose::Role ();
 

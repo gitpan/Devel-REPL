@@ -2,17 +2,18 @@ package Devel::REPL::Profile;
 BEGIN {
   $Devel::REPL::Profile::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Profile::VERSION = '1.003025';
-}
-
+$Devel::REPL::Profile::VERSION = '1.003026';
 use Moose::Role;
 
 requires 'apply_profile';
 
 =head1 NAME
 
-Devel::REPL::Profile
+Devel::REPL::Profile - code to execute when re.pl starts
+
+=head1 VERSION
+
+version 1.003026
 
 =head1 SYNOPSIS
 

@@ -4,9 +4,7 @@ package Devel::REPL::Plugin::ShowClass;
 BEGIN {
   $Devel::REPL::Plugin::ShowClass::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::ShowClass::VERSION = '1.003025';
-}
+$Devel::REPL::Plugin::ShowClass::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use namespace::autoclean;
 
@@ -81,5 +79,8 @@ __END__
 
 Devel::REPL::Plugin::ShowClass - Dump classes initialized with Class::MOP
 
-=cut
+=head1 VERSION
 
+version 1.003026
+
+=cut

@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::History;
 BEGIN {
   $Devel::REPL::Plugin::History::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::History::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::History::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use namespace::autoclean;
 
@@ -82,5 +79,8 @@ __END__
 
 Devel::REPL::Plugin::History - Keep track of all input, provide shortcuts !1, !-1
 
-=cut
+=head1 VERSION
 
+version 1.003026
+
+=cut

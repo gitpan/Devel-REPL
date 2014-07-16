@@ -4,9 +4,7 @@ package Devel::REPL::Plugin::CompletionDriver::Globals;
 BEGIN {
   $Devel::REPL::Plugin::CompletionDriver::Globals::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::CompletionDriver::Globals::VERSION = '1.003025';
-}
+$Devel::REPL::Plugin::CompletionDriver::Globals::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use Devel::REPL::Plugin::Completion;    # die early if cannot load
 use namespace::autoclean;
@@ -70,9 +68,12 @@ __END__
 
 Devel::REPL::Plugin::CompletionDriver::Globals - Complete global variables, packages, namespaced functions
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 AUTHOR
 
 Shawn M Moore, C<< <sartak at gmail dot com> >>
 
 =cut
-

@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::FancyPrompt;
 BEGIN {
   $Devel::REPL::Plugin::FancyPrompt::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::FancyPrompt::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::FancyPrompt::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use namespace::autoclean;
 
@@ -69,6 +66,10 @@ __END__
 
 Devel::REPL::Plugin::FancyPrompt - facilitate user-defined prompts
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 SYNOPSIS
 
     use Devel::REPL;
@@ -123,4 +124,3 @@ This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
 =cut
-

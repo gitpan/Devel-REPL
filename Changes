@@ -1,5 +1,9 @@
 Revision history for Devel-REPL
 
+1.003026  2014-07-16 01:20:41Z
+  - fix inclusion of of optional plugin prereqs when installation is run
+    non-interactively
+
 1.003025  2013-09-29 22:36:59Z (Karen Etheridge)
   - re-release with fixed prerequisites in metadata
 

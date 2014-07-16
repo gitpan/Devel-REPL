@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::MultiLine::PPI;
 BEGIN {
   $Devel::REPL::Plugin::MultiLine::PPI::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::MultiLine::PPI::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::MultiLine::PPI::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use PPI;
 use namespace::autoclean;
@@ -93,6 +90,10 @@ __END__
 =head1 NAME
 
 Devel::REPL::Plugin::MultiLine::PPI - read lines until all blocks are closed
+
+=head1 VERSION
+
+version 1.003026
 
 =head1 SYNOPSIS
 

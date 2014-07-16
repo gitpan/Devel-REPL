@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::DumpHistory;
 BEGIN {
   $Devel::REPL::Plugin::DumpHistory::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::DumpHistory::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::DumpHistory::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use namespace::autoclean;
 
@@ -53,6 +50,10 @@ __END__
 
 Devel::REPL::Plugin::DumpHistory - Plugin for Devel::REPL to save or print
 the history.
+
+=head1 VERSION
+
+version 1.003026
 
 =head1 SYNOPSIS
 

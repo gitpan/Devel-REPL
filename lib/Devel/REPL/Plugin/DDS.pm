@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::DDS;
 BEGIN {
   $Devel::REPL::Plugin::DDS::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::DDS::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::DDS::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use Data::Dump::Streamer ();
 
@@ -39,6 +36,10 @@ __END__
 
 Devel::REPL::Plugin::DDS - Format results with Data::Dump::Streamer
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 SYNOPSIS
 
  # in your re.pl file:
@@ -58,4 +59,3 @@ Devel::REPL::Plugin::DDS - Format results with Data::Dump::Streamer
  $
 
 =cut
-

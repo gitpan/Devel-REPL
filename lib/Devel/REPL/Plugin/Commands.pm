@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::Commands;
 BEGIN {
   $Devel::REPL::Plugin::Commands::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::Commands::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::Commands::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use Scalar::Util qw(weaken);
 
@@ -78,5 +75,8 @@ __END__
 
 Devel::REPL::Plugin::Commands - Generic command creation plugin using injected functions
 
-=cut
+=head1 VERSION
 
+version 1.003026
+
+=cut

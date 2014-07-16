@@ -4,9 +4,7 @@ package Devel::REPL::Plugin::CompletionDriver::INC;
 BEGIN {
   $Devel::REPL::Plugin::CompletionDriver::INC::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::CompletionDriver::INC::VERSION = '1.003025';
-}
+$Devel::REPL::Plugin::CompletionDriver::INC::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use Devel::REPL::Plugin::Completion;    # die early if cannot load
 use File::Next;
@@ -135,9 +133,12 @@ __END__
 
 Devel::REPL::Plugin::CompletionDriver::INC - Complete module names in use and require
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 AUTHOR
 
 Shawn M Moore, C<< <sartak at gmail dot com> >>
 
 =cut
-

@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::Completion;
 BEGIN {
   $Devel::REPL::Plugin::Completion::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::Completion::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::Completion::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use Scalar::Util 'weaken';
 use PPI;
@@ -135,6 +132,10 @@ __END__
 
 Devel::REPL::Plugin::Completion - Extensible tab completion
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 NOTE
 
 By default, the Completion plugin explicitly does I<not> use the Gnu readline
@@ -147,4 +148,3 @@ Set the attribute C<do_readline_filename_completion> to 1 to enable this feature
 Shawn M Moore, C<< <sartak at gmail dot com> >>
 
 =cut
-

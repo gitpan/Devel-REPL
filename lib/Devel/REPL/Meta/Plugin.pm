@@ -4,10 +4,7 @@ package Devel::REPL::Meta::Plugin;
 BEGIN {
   $Devel::REPL::Meta::Plugin::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Meta::Plugin::VERSION = '1.003025';
-}
-
+$Devel::REPL::Meta::Plugin::VERSION = '1.003026';
 use Moose;
 
 extends 'Moose::Meta::Role';

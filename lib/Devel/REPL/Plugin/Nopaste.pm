@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::Nopaste;
 BEGIN {
   $Devel::REPL::Plugin::Nopaste::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::Nopaste::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::Nopaste::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use Moose::Util::TypeConstraints;
 use namespace::autoclean;
@@ -106,6 +103,10 @@ __END__
 
 Devel::REPL::Plugin::Nopaste - #nopaste to upload session's input and output
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 COMMANDS
 
 This module provides these commands to your Devel::REPL shell:
@@ -122,7 +123,7 @@ the nopaste site. For example:
 
 C<#pastetitle example of some code>
 
-defaults to 'Devel::REPL session'
+defaults to C<'Devel::REPL session'>.
 
 =head1 CONFIGURATION
 
@@ -140,7 +141,7 @@ The default of commenting out the output would be set like this:
 
 C<< $_REPL->nopaste_format( 'comment_output' ); >>
 
-These options can be set during a Devel::REPL session, but only affect
+These options can be set during a L<Devel::REPL> session, but only affect
 the future parts of the session, not the past parts.
 
 =head1 AUTHOR
@@ -156,4 +157,3 @@ Shawn M Moore, C<< <sartak at gmail dot com> >>
 =back
 
 =cut
-

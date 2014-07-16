@@ -9,10 +9,7 @@ package Devel::REPL::Plugin::ReadLineHistory;
 BEGIN {
   $Devel::REPL::Plugin::ReadLineHistory::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::ReadLineHistory::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::ReadLineHistory::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use File::HomeDir;
 use File::Spec;
@@ -80,6 +77,10 @@ __END__
 
 Devel::REPL::Plugin::ReadLineHistory - Integrate history with the facilities provided by L<Term::ReadLine>
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 DESCRIPTION
 
 This plugin enables loading and saving command line history from
@@ -107,12 +108,11 @@ and to disable history expansion from GNU readline/history do
 
 =head1 CONFLICTS
 
-Note that Term::ReadLine::Perl does not support a history
+Note that L<Term::ReadLine::Perl> does not support a history
 expansion method.  In that case, you may wish to use the
-Devel::REPL History plugin which provides similar functions.
-Work is underway to make use of either History or
-ReadLineHistory consistent for expansion with either the
-Term::ReadLine::Gnu support or Term::ReadLine::Perl.
+L<Devel::REPL History plugin|Devel::REPL::Plugin::History> which provides similar functions.
+Work is underway to make use of either L<History|Devel::REPL::Plugin::History> or
+L<ReadLineHistory|Devel::REPL::Plugin::ReadHistory>> consistent for expansion with either the
+L<Term::ReadLine::Gnu> support or L<Term::ReadLine::Perl>.
 
 =cut
-

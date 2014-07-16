@@ -2,9 +2,7 @@ package Devel::REPL::Error;
 BEGIN {
   $Devel::REPL::Error::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Error::VERSION = '1.003025';
-}
+$Devel::REPL::Error::VERSION = '1.003026';
 use Moose;
 
 # FIXME get nothingmuch to refactor and release his useful error object

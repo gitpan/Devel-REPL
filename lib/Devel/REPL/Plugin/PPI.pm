@@ -4,14 +4,10 @@ package Devel::REPL::Plugin::PPI;
 BEGIN {
   $Devel::REPL::Plugin::PPI::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::PPI::VERSION = '1.003025';
-}
+$Devel::REPL::Plugin::PPI::VERSION = '1.003026';
 use Devel::REPL::Plugin;
-
 use PPI;
 use PPI::Dumper;
-
 use namespace::autoclean;
 
 sub BEFORE_PLUGIN {
@@ -36,6 +32,10 @@ __END__
 =head1 NAME
 
 Devel::REPL::Plugin::PPI - PPI dumping of Perl code
+
+=head1 VERSION
+
+version 1.003026
 
 =head1 SYNOPSIS
 
@@ -71,5 +71,3 @@ L<Deve::REPL::Plugin::OutputCache> there is no new value in C<_>.
 Shawn M Moore E<lt>sartak@gmail.comE<gt>
 
 =cut
-
-

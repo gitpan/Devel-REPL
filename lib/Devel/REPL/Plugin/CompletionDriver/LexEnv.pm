@@ -4,9 +4,7 @@ package Devel::REPL::Plugin::CompletionDriver::LexEnv;
 BEGIN {
   $Devel::REPL::Plugin::CompletionDriver::LexEnv::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::CompletionDriver::LexEnv::VERSION = '1.003025';
-}
+$Devel::REPL::Plugin::CompletionDriver::LexEnv::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use Devel::REPL::Plugin::Completion;    # die early if cannot load
 use namespace::autoclean;
@@ -44,9 +42,12 @@ __END__
 
 Devel::REPL::Plugin::CompletionDriver::LexEnv - Complete variable names in the REPL's lexical environment
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 AUTHOR
 
 Shawn M Moore, C<< <sartak at gmail dot com> >>
 
 =cut
-

@@ -2,10 +2,7 @@ package Devel::REPL::Script;
 BEGIN {
   $Devel::REPL::Script::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Script::VERSION = '1.003025';
-}
-
+$Devel::REPL::Script::VERSION = '1.003026';
 use Moose;
 use Devel::REPL;
 use File::HomeDir;

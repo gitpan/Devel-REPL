@@ -2,11 +2,8 @@ package Devel::REPL;
 BEGIN {
   $Devel::REPL::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::VERSION = '1.003025';
-}
-# git description: v1.003024-3-g9d73eaa
-
+# git description: v1.003025-9-g5bcac66
+$Devel::REPL::VERSION = '1.003026';
 
 use Term::ReadLine;
 use Moose;
@@ -161,6 +158,10 @@ sub print {
 
 Devel::REPL - a modern perl interactive shell
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 SYNOPSIS
 
   my $repl = Devel::REPL->new;
@@ -207,7 +208,8 @@ which means a single statement doesn't require the semicolon. You can add one
 if you like, though.
 
 If you followed the first example in the L</"SYNOPSIS"> above, you'll have the
-History and LexEnv plugins loaded (and there are many more available).
+L<History|Devel::REPL::Plugin::History> and L<LexEnv|Devel::REPL::Plugin::LexEnv>
+plugins loaded (and there are many more available).
 Although the shell might support "up-arrow" history, the History plugin adds
 "bang" history to that so you can re-execute chosen commands (with e.g.
 C<!53>). The LexEnv plugin ensures that lexical variables declared with the
@@ -337,7 +339,7 @@ output, or even add commands to the shell environment.
 
 A number of plugins ship with C<Devel::REPL>, and more are available on the
 CPAN. Some of the shipped plugins are loaded in the default profile, mentioned
-above.  These plugins can be loaded in your C<< $HOME/.re.pl/repl.rc >> like:
+above.  These plugins can be loaded in your F< $HOME/.re.pl/repl.rc > like:
 
   load_plugin qw( CompletionDriver::Global DumpHistory );
 

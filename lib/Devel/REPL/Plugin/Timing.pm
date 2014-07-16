@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::Timing;
 BEGIN {
   $Devel::REPL::Plugin::Timing::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::Timing::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::Timing::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use Time::HiRes 'time';
 use namespace::autoclean;
@@ -38,6 +35,10 @@ __END__
 
 Devel::REPL::Plugin::Timing - display execution times
 
+=head1 VERSION
+
+version 1.003026
+
 =head1 SYNOPSIS
 
  # in your re.pl file:
@@ -57,4 +58,3 @@ Devel::REPL::Plugin::Timing - display execution times
 Shawn M Moore, C<< <sartak at gmail dot com> >>
 
 =cut
-

@@ -4,11 +4,8 @@ package Devel::REPL::Plugin::Packages;
 BEGIN {
   $Devel::REPL::Plugin::Packages::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::Packages::VERSION = '1.003025';
-}
+$Devel::REPL::Plugin::Packages::VERSION = '1.003026';
 use Devel::REPL::Plugin;
-
 use namespace::autoclean;
 
 our $PKG_SAVE;
@@ -57,10 +54,7 @@ package Devel::REPL::Plugin::Packages::DefaultScratchpad;
 BEGIN {
   $Devel::REPL::Plugin::Packages::DefaultScratchpad::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::Packages::DefaultScratchpad::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::Packages::DefaultScratchpad::VERSION = '1.003026';
 # declare empty scratchpad package for cleanliness
 
 1;
@@ -71,5 +65,8 @@ __END__
 
 Devel::REPL::Plugin::Packages - Keep track of which package the user is in
 
-=cut
+=head1 VERSION
 
+version 1.003026
+
+=cut

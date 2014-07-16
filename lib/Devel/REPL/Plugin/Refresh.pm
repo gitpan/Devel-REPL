@@ -4,10 +4,7 @@ package Devel::REPL::Plugin::Refresh;
 BEGIN {
   $Devel::REPL::Plugin::Refresh::AUTHORITY = 'cpan:PHAYLON';
 }
-{
-  $Devel::REPL::Plugin::Refresh::VERSION = '1.003025';
-}
-
+$Devel::REPL::Plugin::Refresh::VERSION = '1.003026';
 use Devel::REPL::Plugin;
 use namespace::autoclean;
 use Module::Refresh;
@@ -33,5 +30,8 @@ __END__
 
 Devel::REPL::Plugin::Refresh - reload libraries with Module::Refresh
 
-=cut
+=head1 VERSION
 
+version 1.003026
+
+=cut
